@@ -1,0 +1,41 @@
+
+/* App */
+
+.App {
+	height: 100vh;
+	position: relative;
+	width: 100%;
+}
+
+/* App background */
+
+.App-background {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+/* App inner */
+
+.App-inner {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: column;
+	flex-flow: column;
+	height: 100%;
+	position: relative;
+	width: 100%;
+}
+
+/* App stage */
+
+.App-stage {
+	overflow: hidden;
+	flex: 1;
+	position: relative;
+}

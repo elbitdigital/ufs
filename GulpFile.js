@@ -1,4 +1,4 @@
-const _PROJECTNAME = 'base';
+const _PROJECTNAME = 'ufs-app';
 
 var gulp = require('gulp'),
 	concat = require('gulp-concat'),

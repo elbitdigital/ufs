@@ -1,0 +1,41 @@
+
+/* App Screen */
+
+.AppScreen {
+	height: 100%;
+	left: 100%;
+	position: absolute;
+	top: 0;
+	-webkit-transition: transform .6s;
+	-moz-transition: transform .6s;
+	-ms-transition: transform .6s;
+	-o-transition: transform .6s;
+	transition: transform .6s;
+	width: 100%;
+}
+
+.AppScreen.is-active {
+	-webkit-transform: translate3D(-100%, 0, 0);
+	-moz-transform: translate3D(-100%, 0, 0);
+	-ms-transform: translate3D(-100%, 0, 0);
+	-o-transform: translate3D(-100%, 0, 0);
+	transform: translate3D(-100%, 0, 0);
+}
+
+/* App background */
+
+.AppScreen-background {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+/* App inner */
+
+.AppScreen-inner {
+	height: 100%;
+	position: relative;
+	width: 100%;
+}
