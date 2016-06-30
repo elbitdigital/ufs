@@ -1,0 +1,17 @@
+{
+  "rules": {
+    ".read": true,
+    "current": {
+      ".write": "auth == null"
+    },
+    "candidates": {
+      ".write": true
+    },
+    "matches": {
+      ".write": true
+    },
+    "votes": {
+      ".write": true
+    }
+  }
+}
