@@ -14,6 +14,26 @@ var VotingBox = (function () {
 		this.element = element;
 		this.base = base;
 
+		this.current = false;
+		this.match = false;
+
+		this.onCurrentChange = function (snap) {
+
+			var current = snap.val();
+
+			if (current) {
+
+				self.current = current;
+
+				if (self.match)
+					self.match.destroy();
+
+				self.match = new Match(true, self.rootRef.ref('matches').child(current));
+
+			}
+
+		};
+
 		if (this.element && this.base)
 			this.init();
 
@@ -23,36 +43,12 @@ var VotingBox = (function () {
 
 		var self = this;
 
+		// set root
 		this.rootRef = this.base.database();
 
-		this.candidatesRef = this.rootRef.ref('candidates');
-		this.candidatesRef.on('value', function (snap) {
-
-			console.log(snap.val());
-
-		});
-
-		this.matchesRef = this.rootRef.ref('matches');
-		this.matchesRef.on('value', function (snap) {
-
-			console.log(snap.val());
-
-		});
-
+		// set current
 		this.currentRef = this.rootRef.ref('current');
-		this.currentRef.on('value', function (snap) {
-
-			console.log(snap.val());
-
-		});
-
-		this.votesRef = this.rootRef.ref('votes');
-		this.votesRef.on('value', function (snap) {
-
-			console.log(snap.val());
-
-		});
-
+		this.currentRef.on('value', this.onCurrentChange);
 
 	};
 
