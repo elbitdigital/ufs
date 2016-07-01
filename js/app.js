@@ -14,7 +14,7 @@ var App = (function () {
 		this.element = element;
 		this.base = base;
 
-		this.VotingBox = new VotingBox(document.getElementById('voting-box'), this.base);
+		this.votingBox = new VotingBox(document.getElementById('voting-box'), this.base);
 
 		this.header = document.getElementById('ufs-app-header');
 
@@ -24,7 +24,7 @@ var App = (function () {
 
 		};
 
-		this.isFullscreen = false
+		this.isFullscreen = false;
 
 		this.init();
 

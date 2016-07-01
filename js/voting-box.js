@@ -28,7 +28,7 @@ var VotingBox = (function () {
 				if (self.match)
 					self.match.destroy();
 
-				self.match = new Match(true, self.rootRef.ref('matches').child(current));
+				self.match = new Match(document.getElementById('match'), self.rootRef.ref('matches').child(current));
 
 			}
 
@@ -40,8 +40,6 @@ var VotingBox = (function () {
 	}
 
 	VotingBox.prototype.ctrlDataRefs = function () {
-
-		var self = this;
 
 		// set root
 		this.rootRef = this.base.database();

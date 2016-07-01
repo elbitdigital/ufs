@@ -21,7 +21,7 @@ var App = (function () {
 		this.element = element;
 		this.base = base;
 
-		this.VotingBox = new VotingBox(document.getElementById('voting-box'), this.base);
+		this.votingBox = new VotingBox(document.getElementById('voting-box'), this.base);
 
 		this.header = document.getElementById('ufs-app-header');
 
@@ -31,7 +31,7 @@ var App = (function () {
 
 		};
 
-		this.isFullscreen = false
+		this.isFullscreen = false;
 
 		this.init();
 
@@ -79,6 +79,23 @@ var App = (function () {
 
 })();
 
+/*  */
+
+var  = (function () {
+
+	/**
+	 *  constructor
+	 * @constructor
+	 */
+	function () {
+	
+		
+
+	}
+
+	return ;
+
+})();
 
 /* Match */
 
@@ -95,6 +112,8 @@ var Match = (function () {
 
 		this.candidates = [];
 
+		console.log(this.element);
+
 		if (this.element && this.matchRef)
 			this.init();
 
@@ -106,6 +125,7 @@ var Match = (function () {
 
 		try {
 
+			this.element.innerHTML = '';
 			this.matchRef.off();
 
 		} catch (e) { }
@@ -156,7 +176,7 @@ var VotingBox = (function () {
 				if (self.match)
 					self.match.destroy();
 
-				self.match = new Match(true, self.rootRef.ref('matches').child(current));
+				self.match = new Match(document.getElementById('match'), self.rootRef.ref('matches').child(current));
 
 			}
 
