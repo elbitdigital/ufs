@@ -22,11 +22,8 @@ var Match = (function () {
 
 			if (match) {
 
-				if (match.candidates)
-					self.candidates = match.candidates;
-
-				if (match.isActive)
-					self.isActive = match.isActive;
+				self.destroy();
+				self.build(match);
 
 			}
 
@@ -37,11 +34,24 @@ var Match = (function () {
 
 	}
 
+	Match.prototype.build = function () {
+
+		try {
+
+			this.title = '';
+
+		} catch (e) { }
+
+	};
+
 	Match.prototype.destroy = function() {
 
 		console.log('destruindo match');
 
 		try {
+
+			for (var i = this.candidates.length; i--; )
+				candidates[i].destroy();
 
 			this.element.innerHTML = '';
 			this.matchRef.off();

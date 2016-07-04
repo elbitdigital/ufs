@@ -79,21 +79,88 @@ var App = (function () {
 
 })();
 
-/*  */
+/* Candidate */
 
-var  = (function () {
+var Candidate = (function () {
 
 	/**
-	 *  constructor
+	 * Candidate constructor
 	 * @constructor
 	 */
-	function () {
+	function Candidate(element, candidateRef) {
 	
-		
+		this.element = element;
+		this.candidateRef = candidateRef;
+
+		this.onMatchChange = function (snap) {
+
+			var candidate = snap.val();
+
+			if (candidate) {
+
+				self.build(candidate);
+
+			}
+
+		};
+
+		if (this.element && this.candidateRef)
+			this.init();
 
 	}
 
-	return ;
+	Candidate.prototype.build = function (candidate) {
+
+		try {
+
+			this.element.innerHTML = '';
+
+			this.background = document.createElement('div');
+			this.element.appendChild(this.background);
+
+			this.inner = document.createElement('div');
+			this.element.appendChild(this.inner);
+
+			this.name = document.createElement('span');
+			this.photoURL = document.createElement('img');
+
+			this.name.appendChild(document.createTextNode(candidate.name));
+
+			this.name.appendChild(document.createTextNode(candidate.photoURL));
+
+		} catch (e) { }
+
+	};
+
+	Candidate.prototype.destroy = function () {
+
+		try {
+
+			this.element.innerHeight = '';
+			self.candidateRef.off();
+
+		} catch (e) { }
+
+	};
+
+	Candidate.prototype.ctrlDataRefs = function () {
+
+		// set current
+		try {
+
+			this.candidateRef.on('value', this.onCandidateChange);
+
+		} catch (e) { }
+
+	};
+
+	Candidate.prototype.init = function () {
+
+		this.ctrlDataRefs();
+
+	};
+
+	return Candidate;
 
 })();
 
@@ -107,17 +174,40 @@ var Match = (function () {
 	 */
 	function Match(element, matchRef) {
 
+		var self = this;
+
 		this.element = element;
 		this.matchRef = matchRef;
 
 		this.candidates = [];
 
-		console.log(this.element);
+		this.onMatchChange = function (snap) {
+
+			var match = snap.val();
+
+			if (match) {
+
+				self.destroy();
+				self.build(match);
+
+			}
+
+		};
 
 		if (this.element && this.matchRef)
 			this.init();
 
 	}
+
+	Match.prototype.build = function () {
+
+		try {
+
+			this.title = '';
+
+		} catch (e) { }
+
+	};
 
 	Match.prototype.destroy = function() {
 
@@ -125,8 +215,22 @@ var Match = (function () {
 
 		try {
 
+			for (var i = this.candidates.length; i--; )
+				candidates[i].destroy();
+
 			this.element.innerHTML = '';
 			this.matchRef.off();
+
+		} catch (e) { }
+
+	};
+
+	Match.prototype.ctrlDataRefs = function () {
+
+		// set current
+		try {
+
+			this.matchRef.on('value', this.onMatchChange);
 
 		} catch (e) { }
 
@@ -188,8 +292,6 @@ var VotingBox = (function () {
 	}
 
 	VotingBox.prototype.ctrlDataRefs = function () {
-
-		var self = this;
 
 		// set root
 		this.rootRef = this.base.database();
