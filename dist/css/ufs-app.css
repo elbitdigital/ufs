@@ -91,6 +91,44 @@
 /* Header */
 
 .Header {
-  height: 6em;
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 12em;
   text-align: center;
+}
+/* Logo */
+
+.Logo {
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+}
+
+/* Logo inner */
+
+.Logo-inner {
+  position: relative;
+  height: 100%;
+}
+
+/* Logo img */
+
+.Logo img {
+  display: block;
+  height: 100%;
 }

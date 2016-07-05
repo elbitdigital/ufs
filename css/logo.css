@@ -1,7 +1,7 @@
 
-/* Header */
+/* Logo */
 
-.Header {
+.Logo {
 	-webkit-align-items: center;
 	align-items: center;
 	display: -webkit-box;
@@ -11,6 +11,20 @@
 	display: flex;
 	-webkit-justify-content: center;
 	justify-content: center;
-	height: 12em;
-	text-align: center;
+	position: relative;
+	height: 100%;
+}
+
+/* Logo inner */
+
+.Logo-inner {
+	position: relative;
+	height: 100%;
+}
+
+/* Logo img */
+
+.Logo img {
+	display: block;
+	height: 100%;
 }
