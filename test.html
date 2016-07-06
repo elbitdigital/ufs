@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="">
+<meta charset="UTF-8">
+<title></title>
+<meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+<script src="dist/js/villa.min.js"></script>
+<link rel="stylesheet" href="dist/css/villa.min.css"/>
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
+<link rel="stylesheet" type="text/css" href="dist/css/villa-cross.min.css"/>
+<script src="dist/js/html5shiv.js"></script>
+<script src="dist/js/html5shiv-printshiv.js"></script>
+<script src="dist/js/classList.min.js"></script>
+<![endif]-->
+
+<style>
+
+	#app {
+		margin: 1em auto;
+		width: 100%;
+		max-width: 24em;
+	}
+
+	.Match {
+		background-color: #bdbdbd;
+		margin-bottom: 1em;
+	}
+
+	.Current {
+		position: fixed;
+		top: 10px;
+		right: 10px;
+	}
+
+	.Candidate {
+		background-color: #eeeeee;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: column;
+		flex-flow: column;
+		padding: 1em;
+		margin-bottom: 1em;
+	}
+
+	.Candidate input {
+		border: solid 4px #424242;
+		border-radius: 0;
+		margin-bottom: 1em;
+		padding: 1em;
+	}
+
+</style>
+
+<body>
+
+<!--<h1>addCandidates()</h1>-->
+<!--<p>Adiciona candidatos</p>-->
+<!--<h1>addMatch()</h1>-->
+<!--<p>Adiciona uma disputa (votação) baseado nos candidatos criados</p>-->
+<!--<h1>setCurrent()</h1>-->
+<!--<p>Define a disputa padrão baseado na disputa criada</p>-->
+
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+
+<script>
+
+	// Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyAPBMowmgiW0V1H3FDlJ6GBLQHDq7RX3kg",
+		authDomain: "ufs-app.firebaseapp.com",
+		databaseURL: "https://ufs-app.firebaseio.com",
+		storageBucket: "ufs-app.appspot.com"
+	};
+
+	firebase.initializeApp(config);
+
+</script>
+
+<script>
+
+	var databaseRef = firebase.database().ref();
+	var candidatesRef = databaseRef.child('candidates/');
+
+	// Create a storage reference from our storage service
+	var storageRef = firebase.storage().ref();
+
+	// Create a child reference
+	var candidatePhotoRef = storageRef.child('candidatePhoto');
+	// candidatePhotoRef now points to 'candidatePhoto'
+
+</script>
+
+<script>
+
+
+	/* Candidate */
+
+	var Candidate = (function () {
+
+		/**
+		 * Candidate constructor
+		 * @constructor
+		 */
+		function Candidate(element) {
+
+			var self = this;
+
+			this.element = element;
+
+			this.onPhotoUpload = function (snap) {
+
+				try {
+
+					self.photoURL.value = snap.downloadURL;
+					self.candidateRef.child('photoURL').set(snap.downloadURL);
+
+					console.log(snap.downloadURL);
+
+				} catch(e) { }
+
+			};
+
+			this.onPhotoChange = function () {
+
+				var file = this.files[0];
+
+				var metadata = {
+					contentType: file.type
+				};
+
+				console.log(metadata);
+
+				if (file) {
+
+					// Upload file and metadata to the object 'images/mountains.jpg'
+					var uploadTask = candidatePhotoRef.child(file.name).put(file, metadata);
+
+					// Listen for state changes, errors, and completion of the upload.
+					uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
+
+							function(snapshot) {
+
+								// Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+								var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+
+								console.log('Upload is ' + progress + '% done');
+
+								switch (snapshot.state) {
+
+									case firebase.storage.TaskState.PAUSED: // or 'paused'
+										console.log('Upload is paused');
+										break;
+									case firebase.storage.TaskState.RUNNING: // or 'running'
+										console.log('Upload is running');
+										break;
+
+								}
+
+							}, function(error) {
+
+								console.log('ERRO!');
+
+							}, function() {
+
+								self.onPhotoUpload(uploadTask.snapshot);
+
+							});
+
+				}
+
+
+			};
+
+			if (this.element)
+				this.init();
+
+		}
+
+		Candidate.prototype.normalize = function () {
+
+			var self = this;
+
+			if (this.element) {
+
+				// normalize class
+				this.element.className = 'Candidate';
+				this.element.dataset.candidateId = this.candidateID;
+
+				// add input fields
+
+				// database name property
+				this.name = document.createElement('input');
+				this.name.placeholder = 'Nome';
+				this.name.addEventListener('input', function () {
+
+					self.candidateRef.child('name').set(this.value);
+
+				});
+
+				// photo input element (not database property)
+				this.photo = document.createElement('input');
+				this.photo.type = 'file';
+				this.photo.addEventListener('change', this.onPhotoChange);
+
+				// database photoURL property
+				this.photoURL = document.createElement('input');
+				this.photoURL.placeholder = 'URL';
+				this.photoURL.addEventListener('input', function () {
+
+					self.candidateRef.child('photoURL').set(this.value);
+
+				});
+
+				this.element.appendChild(this.name);
+				this.element.appendChild(this.photo);
+				this.element.appendChild(this.photoURL);
+
+			}
+
+		};
+
+		Candidate.prototype.init = function () {
+
+			// get a candidate ref
+			if (!this.candidateID)
+				this.candidateID = candidatesRef.push({}).key;
+
+			this.candidateRef = candidatesRef.child(this.candidateID);
+
+			// normalize the candidate
+			this.normalize();
+
+		};
+
+		return Candidate;
+
+	})();
+
+</script>
+
+<script>
+
+
+	/* Match class */
+
+	var Match = (function () {
+
+		/**
+		 * Match class constructor
+		 * @constructor
+		 */
+		function Match (element) {
+
+			var self = this;
+
+			this.element = element;
+			this.candidates = [];
+
+			if (this.element)
+				this.init();
+
+		}
+
+		Match.prototype.addListeners = function () {
+
+			var self = this;
+
+			this.newCandidate.addEventListener('click', function() {
+
+				var candidate = new Candidate(document.createElement('div'));
+				self.candidates.push(candidate);
+				self.element.appendChild(candidate.element);
+				firebase.database().ref('matches/' + self.matchID + '/candidates').child(candidate.candidateID).set(true);
+
+			});
+
+			this.setCurrent.addEventListener('click', function() {
+
+				firebase.database().ref('current').set(self.matchID);
+
+			});
+
+		};
+
+		Match.prototype.normalize = function () {
+
+			var self = this;
+			this.element.className = 'Match';
+
+			this.newCandidate = document.createElement('button');
+			this.newCandidate.innerText = 'Adicionar candidato';
+			this.setCurrent = document.createElement('button');
+			this.setCurrent.innerText = 'Ativar disputa';
+
+			document.getElementById('app').appendChild(this.element);
+			this.element.appendChild(this.newCandidate);
+			this.element.appendChild(this.setCurrent);
+
+			this.addListeners();
+
+		};
+
+		Match.prototype.init = function () {
+
+			if (!this.matchID) {
+				this.matchID = matchesRef.push({
+					isActive: true,
+					candidates: candidates
+				}).key;
+			}
+
+			this.matchesRef = matchesRef.child(this.matchID);
+
+			this.normalize();
+
+		};
+
+		return Match;
+
+	})();
+
+</script>
+
+<script>
+
+	var rootRef = firebase.database();
+
+	var candidatesRef = rootRef.ref('candidates');
+	var matchesRef = rootRef.ref('matches');
+	var currentRef = rootRef.ref('current');
+
+	var candidates = false;
+	var match = false;
+
+	function addCandidates() {
+
+		candidates = [];
+
+		candidatesRef.set(false);
+
+		candidates.push(candidatesRef.push({
+			name: 'André & Leandro',
+			photo: ''
+		}).key);
+
+		candidates.push(candidatesRef.push({
+			name: 'João Lucas & Donizett',
+			photo: ''
+		}).key);
+
+		console.log(candidates);
+
+	}
+
+	function addMatch() {
+
+		matchesRef.set(false);
+
+		match = matchesRef.push({
+			isActive: true,
+			candidates: candidates
+		}).key;
+
+		console.log(match);
+
+	}
+
+	function setCurrent() {
+
+		currentRef.set(match);
+
+	}
+
+</script>
+
+
+<!--
+
+add match (max: candidates less or equals 2)
+	add candidates (form create candidates)
+	activate match (turn into current)
+
+-->
+
+<main id="app">
+	<button id='newMatch'>Criar disputa</button>
+	<span id='current' class="Current"></span>
+</main>
+
+<script>
+
+	var app = {
+		element: document.getElementById('app')
+	};
+
+	document.getElementById('newMatch').addEventListener('click', function () {
+		var newMatch = new Match(document.createElement('div'));
+	}, false);
+
+	// Set current value on top right side
+	firebase.database().ref('current').on('value', function (snap) {
+		document.getElementById('current').innerText = snap.val();
+	});
+
+</script>
+
+
+</body>
+
+</html>

@@ -27,6 +27,8 @@ var Match = (function () {
 
 			}
 
+			console.log(match);
+
 		};
 
 		if (this.element && this.matchRef)

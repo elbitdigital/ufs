@@ -192,6 +192,8 @@ var Match = (function () {
 
 			}
 
+			console.log(match);
+
 		};
 
 		if (this.element && this.matchRef)
@@ -203,7 +205,10 @@ var Match = (function () {
 
 		try {
 
-			this.title = '';
+			for (var i = this.candidates.length; i--; )
+				candidates[i].destroy();
+
+			this.element.innerHTML = '';
 
 		} catch (e) { }
 
