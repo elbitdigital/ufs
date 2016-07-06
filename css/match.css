@@ -1,0 +1,17 @@
+
+/* Match */
+
+.Match {
+	-webkit-align-items: flex-end;
+	align-items: flex-end;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	height: 100%;
+	-webkit-justify-content: center;
+	justify-content: center;
+	position: relative;
+	width: 100%;
+}
