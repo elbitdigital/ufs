@@ -2,6 +2,7 @@
 /* Candidate */
 
 .Candidate {
-	height: 300px;
-	width: 300px;
+	height: 80vh;
+	opacity: .6;
+	width: 80vh;
 }
