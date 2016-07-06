@@ -94,9 +94,23 @@
 /* Candidate */
 
 .Candidate {
-  height: 80vh;
+  height: 18em;
   opacity: .6;
-  width: 80vh;
+  width: 18em;
+}
+
+@media (min-width: 21em) {
+  .Candidate {
+    height: 21em;
+    width: 21em;
+  }
+}
+
+@media (min-width: 48em) {
+  .Candidate {
+    height: 24em;
+    width: 24em;
+  }
 }
 /* Footer */
 
@@ -162,6 +176,8 @@
   height: 100%;
   -webkit-justify-content: center;
   justify-content: center;
+  overflow-y: auto;
+  padding-top: 6em;
   position: relative;
   width: 100%;
 }

@@ -88,6 +88,7 @@
 				try {
 
 					self.photoURL.value = snap.downloadURL;
+					self.candidateRef.child('photoURL').set(snap.downloadURL);
 
 					console.log(snap.downloadURL);
 
@@ -153,16 +154,24 @@
 
 		Candidate.prototype.normalize = function () {
 
+			var self = this;
+
 			if (this.element) {
 
 				// normalize class
 				this.element.className = 'Candidate';
+				this.element.dataset.candidateId = this.candidateID;
 
 				// add input fields
 
 				// database name property
 				this.name = document.createElement('input');
 				this.name.placeholder = 'Nome';
+				this.name.addEventListener('input', function () {
+
+					self.candidateRef.child('name').set(this.value);
+
+				});
 
 				// photo input element (not database property)
 				this.photo = document.createElement('input');
@@ -172,6 +181,11 @@
 				// database photoURL property
 				this.photoURL = document.createElement('input');
 				this.photoURL.placeholder = 'URL';
+				this.photoURL.addEventListener('input', function () {
+
+					self.candidateRef.child('photoURL').set(this.value);
+
+				});
 
 				this.element.appendChild(this.name);
 				this.element.appendChild(this.photo);
@@ -183,8 +197,12 @@
 
 		Candidate.prototype.init = function () {
 
+			// get a candidate ref
+			this.candidateID = candidatesRef.push({}).key;
+			this.candidateRef = candidatesRef.child(this.candidateID);
+
+			// normalize the candidate
 			this.normalize();
-			console.log(this.element);
 
 		};
 
@@ -195,6 +213,9 @@
 </script>
 
 <script>
+
+	var databaseRef = firebase.database().ref();
+	var candidatesRef = databaseRef.child('candidates/');
 
 	// Create a storage reference from our storage service
 	var storageRef = firebase.storage().ref();
@@ -212,9 +233,6 @@
 	};
 
 	app.candidates = [
-			new Candidate(document.createElement('div')),
-			new Candidate(document.createElement('div')),
-			new Candidate(document.createElement('div')),
 			new Candidate(document.createElement('div')),
 			new Candidate(document.createElement('div'))
 	];
