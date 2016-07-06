@@ -42,7 +42,7 @@
 
 	textElement.addEventListener('input', function () {
 
-		textRef.push(this.value)
+		textRef.child(this.value).set(true);
 
 	});
 
