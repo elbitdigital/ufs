@@ -9,8 +9,8 @@
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
+	height: 12em;
 	-webkit-justify-content: center;
 	justify-content: center;
-	height: 12em;
 	text-align: center;
 }

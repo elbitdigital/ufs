@@ -17,6 +17,13 @@
 	width: 100%;
 }
 
+/* App header */
+
+.App-header {
+	position: absolute;
+	width: 100%;
+}
+
 /* App inner */
 
 .App-inner {
@@ -38,4 +45,5 @@
 	overflow: hidden;
 	flex: 1;
 	position: relative;
+	z-index: 1;
 }
