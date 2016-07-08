@@ -7,16 +7,24 @@ var Candidate = (function () {
 	 * Candidate constructor
 	 * @constructor
 	 */
-	function Candidate(element, candidateRef) {
+	function Candidate(element, candidateRef, voteButton) {
+
+		var self = this;
 	
 		this.element = element;
 		this.candidateRef = candidateRef;
+		this.voteButton = voteButton;
 
-		this.onMatchChange = function (snap) {
+		this.key = false;
+
+		this.onCandidateChange = function (snap) {
 
 			var candidate = snap.val();
 
 			if (candidate) {
+
+				self.name = candidate.name;
+				self.photoURL = candidate.photoURL;
 
 				self.build(candidate);
 
@@ -33,20 +41,31 @@ var Candidate = (function () {
 
 		try {
 
+			// normalize element
 			this.element.innerHTML = '';
+			this.element.className = 'Candidate';
 
+			// create background element
 			this.background = document.createElement('div');
+			this.background.className = 'Candidate-background';
 			this.element.appendChild(this.background);
 
+			// set background image
+			this.background.style.backgroundImage = 'url(' + this.photoURL + ')';
+
+			// add overlay to background
+			this.overlay = document.createElement('div');
+			this.overlay.className = 'Candidate-overlay';
+			this.background.appendChild(this.overlay);
+
+			// create inner element
 			this.inner = document.createElement('div');
+			this.inner.className = 'Candidate-inner';
 			this.element.appendChild(this.inner);
 
-			this.name = document.createElement('span');
-			this.photoURL = document.createElement('img');
-
-			this.name.appendChild(document.createTextNode(candidate.name));
-
-			this.name.appendChild(document.createTextNode(candidate.photoURL));
+			// append button element to inner
+			this.voteButton.build(this);
+			this.inner.appendChild(this.voteButton.element);
 
 		} catch (e) { }
 

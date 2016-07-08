@@ -14,39 +14,23 @@
 <script src="public/dist/js/classList.min.js"></script>
 <![endif]-->
 
+<style>
+
+	body {
+		background: url("img/background.png") no-repeat center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		height: 100vh;
+		width: 100%;
+	}
+
+</style>
+
 <body>
 
-<input id="text" type="text"/>
 
-<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
-
-<script>
-
-	// Initialize Firebase
-	var config = {
-		apiKey: "AIzaSyAPBMowmgiW0V1H3FDlJ6GBLQHDq7RX3kg",
-		authDomain: "ufs-app.firebaseapp.com",
-		databaseURL: "https://ufs-app.firebaseio.com",
-		storageBucket: "ufs-app.appspot.com"
-	};
-
-	firebase.initializeApp(config);
-
-</script>
-
-<script>
-
-	textRef = firebase.database().ref().child('text');
-
-	var textElement = document.getElementById('text');
-
-	textElement.addEventListener('input', function () {
-
-		textRef.child(this.value).set(true);
-
-	});
-
-</script>
 
 </body>
 

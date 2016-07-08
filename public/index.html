@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html lang="">
 <meta charset="UTF-8">
-<title>Jesse James UFS</title>
+<title>UFS - Combate Sertanejo</title>
 <meta name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+<meta name="mobile-web-app-capable" content="yes">
+<script>
+	(function(d) {
+		var config = {
+					kitId: 'wbk2jny',
+					scriptTimeout: 3000,
+					async: true
+				},
+				h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	})(document);
+</script>
+<link rel="manifest" href="/manifest.json">
 <script src="dist/js/villa.min.js"></script>
 <link rel="stylesheet" href="dist/css/villa.min.css"/>
 <link rel="stylesheet" href="dist/css/ufs-app.css"/>
@@ -15,35 +27,50 @@
 <script src="dist/js/classList.min.js"></script>
 <![endif]-->
 
-<style>
-
-
-
-</style>
-
 <body>
 
 <main id="ufs-app" class="App">
 
-	<div class="App-background pink-a700"></div>
+	<div class="App-background">
+
+		<div class="App-overlay"></div>
+
+	</div>
 
 	<div class="App-inner">
 
-		<header class="Header App-header grey-300">
+		<header id="ufs-app-header" class="Header App-header">
 
-			<h1 class="font-grey-400">UFS</h1>
+			<div class="Logo">
+
+				<div class="Logo-inner">
+
+					<img src="../img/UFSLogo.png" alt=""/>
+
+				</div>
+
+			</div>
 
 		</header>
 
-		<div class="Stage App-stage grey-200">
+		<div class="Stage App-stage">
 
 			<div class="AppScreen is-active">
 
-				<div class="AppScreen-background grey-900"></div>
+				<div class="AppScreen-background"></div>
 
 				<div class="AppScreen-inner">
 
-					<div id="voting-box" class="VotingBox"></div>
+					<div id="voting-box" class="VotingBox">
+
+						<div id="match" class="Match">
+
+							<div class="Candidate blue"></div>
+							<div class="Candidate red"></div>
+
+						</div>
+
+					</div>
 
 				</div>
 
@@ -83,6 +110,13 @@
 	};
 
 	firebase.initializeApp(config);
+
+</script>
+
+<script>
+
+	var databaseRef = firebase.database().ref();
+	var votesRef = databaseRef.child('votes/');
 
 </script>
 

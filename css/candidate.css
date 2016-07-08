@@ -3,8 +3,47 @@
 
 .Candidate {
 	height: 18em;
-	opacity: .6;
+	position: relative;
 	width: 18em;
+}
+
+/* Candidate background */
+
+.Candidate-background {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 100%;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.Candidate-inner {
+	height: 100%;
+	left: 0;
+	position: relative;
+	top: 0;
+	width: 100%;
+}
+
+.Candidate-overlay {
+	background: rgba(0,0,0,0.48);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.3) 34%, rgba(0,0,0,0) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(0,0,0,0.48)), color-stop(34%, rgba(0,0,0,0.3)), color-stop(100%, rgba(0,0,0,0)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.3) 34%, rgba(0,0,0,0) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.3) 34%, rgba(0,0,0,0) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.3) 34%, rgba(0,0,0,0) 100%);
+	background: radial-gradient(ellipse at center, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.3) 34%, rgba(0,0,0,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );
+	height: 400%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 400%;
 }
 
 @media (min-width: 21em) {
@@ -21,6 +60,15 @@
 	.Candidate {
 		height: 24em;
 		width: 24em;
+	}
+
+}
+
+@media (min-width: 60em) {
+
+	.Candidate {
+		height: 30em;
+		width: 30em;
 	}
 
 }

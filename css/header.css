@@ -10,6 +10,7 @@
 	display: -webkit-flex;
 	display: flex;
 	height: 12em;
+	padding-top: 3em;
 	-webkit-justify-content: center;
 	justify-content: center;
 	text-align: center;

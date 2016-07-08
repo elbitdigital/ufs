@@ -14,20 +14,20 @@ var Match = (function () {
 		this.element = element;
 		this.matchRef = matchRef;
 
+		this.key = false;
+
 		this.candidates = [];
 
-		this.onMatchChange = function (snap) {
+		this.onMatchValueChange = function (snap) {
+
+			// add key to match
+			if (!self.key)
+				self.key = snap.key;
 
 			var match = snap.val();
 
-			if (match) {
-
-				self.destroy();
+			if (match)
 				self.build(match);
-
-			}
-
-			console.log(match);
 
 		};
 
@@ -36,16 +36,53 @@ var Match = (function () {
 
 	}
 
-	Match.prototype.build = function () {
+	Match.prototype.build = function (match) {
 
 		try {
 
-			for (var i = this.candidates.length; i--; )
-				candidates[i].destroy();
-
+			// reset element
 			this.element.innerHTML = '';
 
+			// destroy all candidates
+			this.destroyAllCandidates();
+
+			// temporary array of candidates
+			var candidates = Object.keys(match.candidates);
+
+			// create all candidates
+			for (var i = 0; i < candidates.length; i++) {
+
+				// candidate element
+				var candidateElement = document.createElement('div');
+
+				// candidate data reference
+				var candidateRef = firebase.database().ref('candidates/' + candidates[i]);
+
+				// candidate vote button
+				var candidateVoteButton = new VoteButton(this.key, candidates[i]);
+
+				// candidate instance
+				var candidate = new Candidate(candidateElement, candidateRef, candidateVoteButton);
+
+				// push to candidates array the new
+				candidates.push(candidate);
+
+				// append candidate element to match
+				this.element.appendChild(candidate.element);
+
+			}
+
 		} catch (e) { }
+
+	};
+
+	Match.prototype.destroyAllCandidates = function () {
+
+		for (var i = this.candidates.length; i--; )
+			this.candidates[i].destroy();
+
+		// reset candidates array
+		this.candidates = [];
 
 	};
 
@@ -55,8 +92,7 @@ var Match = (function () {
 
 		try {
 
-			for (var i = this.candidates.length; i--; )
-				candidates[i].destroy();
+			this.destroyAllCandidates();
 
 			this.element.innerHTML = '';
 			this.matchRef.off();
@@ -70,7 +106,7 @@ var Match = (function () {
 		// set current
 		try {
 
-			this.matchRef.on('value', this.onMatchChange);
+			this.matchRef.on('value', this.onMatchValueChange);
 
 		} catch (e) { }
 
@@ -78,11 +114,7 @@ var Match = (function () {
 
 	Match.prototype.init = function() {
 
-		this.matchRef.on('value', function (snap) {
-
-			console.log(snap.val());
-
-		});
+		this.ctrlDataRefs();
 
 	};
 

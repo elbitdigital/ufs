@@ -17,7 +17,7 @@ var VotingBox = (function () {
 		this.current = false;
 		this.match = false;
 
-		this.onCurrentChange = function (snap) {
+		this.onCurrentValueChange = function (snap) {
 
 			var current = snap.val();
 
@@ -46,7 +46,7 @@ var VotingBox = (function () {
 
 		// set current
 		this.currentRef = this.rootRef.ref('current');
-		this.currentRef.on('value', this.onCurrentChange);
+		this.currentRef.on('value', this.onCurrentValueChange);
 
 	};
 

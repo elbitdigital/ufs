@@ -68,7 +68,7 @@ source.images.largePhotos = {
 
 var dist = {
 	content: '*',
-	location: 'dist/'
+	location: 'public/dist/'
 };
 
 dist.css = {
@@ -101,16 +101,26 @@ gulp.task('css-watch', ['css'], function () {
 // JS
 
 gulp.task('js', function() {
-	gulp.src(source.js.location + source.js.content)
-		.pipe(concat(_PROJECTNAME + '.js'))
-		.pipe(gulp.dest(dist.js.location))
-		.pipe(uglify({
-			preserveComments: 'some'
-		}))
-		.pipe(rename({
-			extname: '.min.js'
-		}))
-		.pipe(gulp.dest(dist.js.location));
+
+	try {
+
+		gulp.src(source.js.location + source.js.content)
+			.pipe(concat(_PROJECTNAME + '.js'))
+			.pipe(gulp.dest(dist.js.location))
+			.pipe(uglify({
+				preserveComments: 'some'
+			}))
+			.pipe(rename({
+				extname: '.min.js'
+			}))
+			.pipe(gulp.dest(dist.js.location));
+
+	} catch (e) {
+
+		console.log(e);
+
+	}
+
 });
 
 gulp.task('js-watch', ['js'], function () {
@@ -144,12 +154,13 @@ gulp.task('serve', function () {
 	// Serve files from the root of this project
 	browserSync.init({
 		server: {
-			baseDir: "./",
+			baseDir: "./public/",
 			index: "index.html",
 			routes: {
-				"/home": "./index.html"
+				"/home": "index.html"
 			}
-		}
+		},
+		ghostMode: false
 	});
 
 	gulp.watch([source.css.location + source.css.content], ['css-watch']);
