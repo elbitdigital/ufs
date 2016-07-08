@@ -14,55 +14,32 @@
 <script src="dist/js/classList.min.js"></script>
 <![endif]-->
 
-<style>
+<link rel="stylesheet" type="text/css" href="css/admin.css"/>
 
-	#app {
-		margin: 1em auto;
-		width: 100%;
-		max-width: 24em;
-	}
+<body class="grey-100">
 
-	.Match {
-		background-color: #bdbdbd;
-		margin-bottom: 1em;
-	}
+<header class="AdminHeader">
 
-	.Current {
-		position: fixed;
-		top: 10px;
-		right: 10px;
-	}
+	<div class="AdminHeader-inner">
 
-	.Candidate {
-		background-color: #eeeeee;
-		display: -webkit-box;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display: flex;
-		-webkit-flex-flow: column;
-		flex-flow: column;
-		padding: 1em;
-		margin-bottom: 1em;
-	}
+		<img src="img/JesseJamesLogo--preto.png" class="AdminLogo" />
 
-	.Candidate input {
-		border: solid 4px #424242;
-		border-radius: 0;
-		margin-bottom: 1em;
-		padding: 1em;
-	}
+	</div>
 
-</style>
+</header>
 
-<body>
+<main id="AdminApp" class="AdminApp">
 
-<!--<h1>addCandidates()</h1>-->
-<!--<p>Adiciona candidatos</p>-->
-<!--<h1>addMatch()</h1>-->
-<!--<p>Adiciona uma disputa (votação) baseado nos candidatos criados</p>-->
-<!--<h1>setCurrent()</h1>-->
-<!--<p>Define a disputa padrão baseado na disputa criada</p>-->
+	<button id="newMatch" class="Button">Criar disputa</button>
+	<button id="showMatches" class="Button">Recolher disputas &#x25B4</button>
+	<span id="current" class="Current"></span>
+	<div id="matches" class="Matches is-expanded"></div>
+
+</main>
+
+<footer>
+	<span>Rodapé</span>
+</footer>
 
 <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
 
@@ -81,6 +58,11 @@
 </script>
 
 <script>
+
+	var app = {
+		element: document.getElementById('AdminApp'),
+		matches: document.getElementById('matches')
+	};
 
 	var databaseRef = firebase.database().ref();
 	var candidatesRef = databaseRef.child('candidates/');
@@ -105,11 +87,12 @@
 		 * Candidate constructor
 		 * @constructor
 		 */
-		function Candidate(element) {
+		function Candidate(element, candidateID) {
 
 			var self = this;
 
 			this.element = element;
+			this.candidateID = candidateID;
 
 			this.onPhotoUpload = function (snap) {
 
@@ -162,7 +145,7 @@
 
 							}, function(error) {
 
-								console.log('ERRO!');
+								console.log('ERRO!' + error);
 
 							}, function() {
 
@@ -253,11 +236,10 @@
 		 * Match class constructor
 		 * @constructor
 		 */
-		function Match (element) {
-
-			var self = this;
+		function Match (element, matchID) {
 
 			this.element = element;
+			this.matchID = matchID;
 			this.candidates = [];
 
 			if (this.element)
@@ -269,36 +251,81 @@
 
 			var self = this;
 
+			// Append new candidate child to match element and set candidate on selected match
 			this.newCandidate.addEventListener('click', function() {
 
-				var candidate = new Candidate(document.createElement('div'));
+				var candidate = new Candidate(document.createElement('div'), false);
 				self.candidates.push(candidate);
 				self.element.appendChild(candidate.element);
 				firebase.database().ref('matches/' + self.matchID + '/candidates').child(candidate.candidateID).set(true);
 
-			});
+			}, false);
 
+			// Update current node with current match
 			this.setCurrent.addEventListener('click', function() {
 
 				firebase.database().ref('current').set(self.matchID);
 
-			});
+			}, false);
 
+			// Delete selected match
+			// TO-DO: confirmation dialog
+			this.deleteMatch.addEventListener('click', function() {
+
+				if (firebase.database().ref('matches/' + self.matchID).set(null)) {
+					var parent = app.matches;
+					var child = document.getElementById(self.matchID);
+					var childOld = parent.removeChild(child);
+				}
+
+			}, false);
+
+			// Edit title of the match
+			// TO-DO: input without default styles and button to allow title update
+			this.titleEdit.addEventListener('input', function() {
+
+				self.matchRef.child('title').set(this.value); //this.value = value from input
+
+			});
 		};
 
 		Match.prototype.normalize = function () {
 
-			var self = this;
+			/* Set match element info (created on first parameter of function) */
 			this.element.className = 'Match';
+			this.element.id = this.matchID;
+			this.element.dataset.matchId = this.matchID;
 
+			/* Create an text element to display status about the current match */
+			this.isCurrent = document.createElement('span');
+			this.isCurrent.className = 'Match-current';
+			this.isCurrent.innerText = 'ATUAL';
+
+			/* Create element and inner display/input to display and edit match title */
+			this.title = document.createElement('div');
+			this.title.innerText = 'Título da disputa: ';
+			this.titleEdit = document.createElement('input');
+			this.titleEdit.placeholder = '-';
+
+			/* Create buttons of the match*/
 			this.newCandidate = document.createElement('button');
+			this.newCandidate.className = 'Button Candidate-add';
 			this.newCandidate.innerText = 'Adicionar candidato';
 			this.setCurrent = document.createElement('button');
+			this.setCurrent.className = 'Button Current-set';
 			this.setCurrent.innerText = 'Ativar disputa';
+			this.deleteMatch = document.createElement('button');
+			this.deleteMatch.className = 'Button Match-delete';
+			this.deleteMatch.innerText = 'Excluir disputa';
 
-			document.getElementById('app').appendChild(this.element);
+			/* Add new element on first position of the element (matches) tree */
+			document.getElementById('matches').insertBefore(this.element, document.getElementById('matches').firstElementChild);
+			this.element.appendChild(this.isCurrent);
+			this.element.appendChild(this.title);
+			this.title.appendChild(this.titleEdit);
 			this.element.appendChild(this.newCandidate);
 			this.element.appendChild(this.setCurrent);
+			this.element.appendChild(this.deleteMatch);
 
 			this.addListeners();
 
@@ -306,14 +333,16 @@
 
 		Match.prototype.init = function () {
 
+			/* If create without id (second parameter as 'false'), create a new child id on firebase */
 			if (!this.matchID) {
-				this.matchID = matchesRef.push({
+				this.matchID = firebase.database().ref('matches').push({
 					isActive: true,
-					candidates: candidates
+					candidates: this.candidates
 				}).key;
 			}
 
-			this.matchesRef = matchesRef.child(this.matchID);
+			/* Set matchRef as the previous created child on matches node */
+			this.matchRef = firebase.database().ref('matches').child(this.matchID);
 
 			this.normalize();
 
@@ -327,87 +356,94 @@
 
 <script>
 
-	var rootRef = firebase.database();
+	/* Toggle matches display list */
+	document.getElementById('showMatches').addEventListener('click', function() {
+		// this reference to button element pressed
+		app.matches.classList.contains('is-expanded')
+				? this.innerHTML = 'Exibir disputas &#x25BE' // arrow down
+				: this.innerHTML = 'Recolher disputas &#x25B4'; // arrow up
 
-	var candidatesRef = rootRef.ref('candidates');
-	var matchesRef = rootRef.ref('matches');
-	var currentRef = rootRef.ref('current');
+		app.matches.classList.toggle('is-expanded');
+	});
 
-	var candidates = false;
-	var match = false;
-
-	function addCandidates() {
-
-		candidates = [];
-
-		candidatesRef.set(false);
-
-		candidates.push(candidatesRef.push({
-			name: 'André & Leandro',
-			photo: ''
-		}).key);
-
-		candidates.push(candidatesRef.push({
-			name: 'João Lucas & Donizett',
-			photo: ''
-		}).key);
-
-		console.log(candidates);
-
-	}
-
-	function addMatch() {
-
-		matchesRef.set(false);
-
-		match = matchesRef.push({
-			isActive: true,
-			candidates: candidates
-		}).key;
-
-		console.log(match);
-
-	}
-
-	function setCurrent() {
-
-		currentRef.set(match);
-
-	}
-
-</script>
-
-
-<!--
-
-add match (max: candidates less or equals 2)
-	add candidates (form create candidates)
-	activate match (turn into current)
-
--->
-
-<main id="app">
-	<button id='newMatch'>Criar disputa</button>
-	<span id='current' class="Current"></span>
-</main>
-
-<script>
-
-	var app = {
-		element: document.getElementById('app')
-	};
-
+	/* Add new match element to matches elements when clicked on 'Adicionar disputa' button */
 	document.getElementById('newMatch').addEventListener('click', function () {
-		var newMatch = new Match(document.createElement('div'));
+		new Match(document.createElement('div'), false);
 	}, false);
 
-	// Set current value on top right side
+	/* Read matches firebase node once and list all matches and their candidates */
+	firebase.database().ref('matches').once('value').then(function (snap) {
+
+		// Walk through each child of matches node (one match at time)
+		snap.forEach(function(childSnap) {
+
+			// Create element with new match instance
+			var match = new Match(document.createElement('div'), childSnap.key);
+
+			// If match isActive (like it is valid or not), set its data
+			if (childSnap.val().isActive) {
+
+				// Input contain title value
+				match.titleEdit.value = childSnap.val().title;
+
+				// Get all candidates from match in the loop
+				var candidates = childSnap.child('candidates').val();
+
+				// Loop through each candidate of the match
+				for (var candidateKey in candidates) {
+					if (candidates.hasOwnProperty(candidateKey)) {
+
+						// Create an element and set its data for each candidate on the match
+						firebase.database().ref('candidates/' + candidateKey).once('value').then(function (snapCandidate) {
+
+							var candidate = new Candidate(document.createElement('div'), snapCandidate.key);
+							candidate.name.value = snapCandidate.val().name;
+							candidate.photoURL.value = snapCandidate.val().photoURL;
+							match.candidates.push(candidate);
+							match.element.appendChild(candidate.element);
+
+						});
+
+					}
+
+				}
+
+			}
+
+		});
+
+	});
+
+	// Hold last current match
+	var lastCurrentNode = false;
+
+	/* Set current value on top right corner and update match element as current match element */
 	firebase.database().ref('current').on('value', function (snap) {
-		document.getElementById('current').innerText = snap.val();
+		document.getElementById('current').innerText = snap.val(); // set text on current
+
+		// lastCurrentNode starts false so there was no last current
+		// on this decision, it toggles back match to its default style (as a current node that is not current anymore)
+		if (lastCurrentNode) {
+			// as there is a listener on current updates, if there is an update on current node
+			// firstChild from node === top right corner label
+			lastCurrentNode.firstChild.classList.toggle('is-visible');
+			// show or hide buttons to set as current or delete match
+				// (cant update current as current and cant delete current)
+			lastCurrentNode.querySelector('button.Current-set').classList.toggle('is-hide');
+			lastCurrentNode.querySelector('button.Match-delete').classList.toggle('is-hide');
+		}
+
+		// always set new current match on current node update
+		var currentNode = document.getElementById(snap.val());
+		lastCurrentNode = currentNode;
+
+		currentNode.firstChild.classList.toggle('is-visible');
+		currentNode.querySelector('button.Current-set').classList.toggle('is-hide');
+		currentNode.querySelector('button.Match-delete').classList.toggle('is-hide');
+
 	});
 
 </script>
-
 
 </body>
 
