@@ -264,9 +264,9 @@
   border: none;
   border-radius: 0;
   cursor: pointer;
+  font-family: "jaf-bernino-sans-comp", sans-serif;
   outline: 0;
   display: block;
-  font-family: "jaf-bernino-sans-comp", sans-serif;
   position: absolute;
   right: 1em;
   bottom: 1em;
@@ -276,6 +276,8 @@
 
 .Button-label {
   bottom: .375em;
+  display: none;
+  /* NONE */
   padding: 0 .375em;
   position: absolute;
   right: 100%;
@@ -365,16 +367,42 @@
 /* Candidate background */
 
 .Candidate-background {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   height: 100%;
   left: 0;
   overflow: hidden;
   position: absolute;
   top: 0;
   width: 100%;
+}
+
+.Candidate-image {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.Candidate-title {
+  font-family: "jaf-bernino-sans-comp", sans-serif;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  padding-top: 4.5em;
+}
+
+.Candidate-title span {
+  color: #ffffff;
+  font-size: 3em;
+  font-weight: 800;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .Candidate-inner {
@@ -386,14 +414,14 @@
 }
 
 .Candidate-overlay {
-  background: rgba(0,0,0,0.48);
-  background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.3) 34%, rgba(0,0,0,0) 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(0,0,0,0.48)), color-stop(34%, rgba(0,0,0,0.3)), color-stop(100%, rgba(0,0,0,0)));
-  background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.3) 34%, rgba(0,0,0,0) 100%);
-  background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.3) 34%, rgba(0,0,0,0) 100%);
-  background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.3) 34%, rgba(0,0,0,0) 100%);
-  background: radial-gradient(ellipse at center, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.3) 34%, rgba(0,0,0,0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );
+  /*background: rgba(0,0,0,0.48);*/
+  /*background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.3) 34%, rgba(0,0,0,0) 100%);*/
+  /*background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(0,0,0,0.48)), color-stop(34%, rgba(0,0,0,0.3)), color-stop(100%, rgba(0,0,0,0)));*/
+  /*background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.3) 34%, rgba(0,0,0,0) 100%);*/
+  /*background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.3) 34%, rgba(0,0,0,0) 100%);*/
+  /*background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.3) 34%, rgba(0,0,0,0) 100%);*/
+  /*background: radial-gradient(ellipse at center, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.3) 34%, rgba(0,0,0,0) 100%);*/
+  /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );*/
   height: 400%;
   left: 0;
   position: absolute;
@@ -417,8 +445,8 @@
 
 @media (min-width: 60em) {
   .Candidate {
-    height: 30em;
-    width: 30em;
+    height: 28em;
+    width: 28em;
   }
 }
 /* Footer */
@@ -492,6 +520,7 @@
   -webkit-justify-content: center;
   justify-content: center;
   overflow-y: auto;
+  overflow-x: hidden;
   padding-top: 6em;
   position: relative;
   width: 100%;

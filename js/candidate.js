@@ -45,18 +45,35 @@ var Candidate = (function () {
 			this.element.innerHTML = '';
 			this.element.className = 'Candidate';
 
+			/* BACKGROUND */
+
 			// create background element
 			this.background = document.createElement('div');
 			this.background.className = 'Candidate-background';
 			this.element.appendChild(this.background);
 
-			// set background image
-			this.background.style.backgroundImage = 'url(' + this.photoURL + ')';
-
 			// add overlay to background
 			this.overlay = document.createElement('div');
 			this.overlay.className = 'Candidate-overlay';
 			this.background.appendChild(this.overlay);
+
+			// add candidate title to background (name)
+			this.title = document.createElement('div');
+			this.title.className = 'Candidate-title';
+			this.titleSpan = document.createElement('span');
+			this.titleSpan.innerText = this.name;
+			this.title.appendChild(this.titleSpan);
+			this.background.appendChild(this.title);
+
+			// add image element to background
+			this.image = document.createElement('div');
+			this.image.className = 'Candidate-image';
+			this.background.appendChild(this.image);
+
+			// set image background
+			this.image.style.backgroundImage = 'url(' + this.photoURL + ')';
+
+			/* INNER */
 
 			// create inner element
 			this.inner = document.createElement('div');

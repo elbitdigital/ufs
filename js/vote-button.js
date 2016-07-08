@@ -53,7 +53,7 @@ var VoteButton = (function () {
 
 	VoteButton.prototype.delay = false;
 
-	VoteButton.prototype.audio = new Audio('./audio/music_marimba_chord.wav');
+	VoteButton.prototype.audio = new Audio('../audio/music_marimba_chord.wav');
 
 	VoteButton.prototype.doBeep = function () {
 

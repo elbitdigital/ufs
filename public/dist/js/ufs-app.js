@@ -125,18 +125,35 @@ var Candidate = (function () {
 			this.element.innerHTML = '';
 			this.element.className = 'Candidate';
 
+			/* BACKGROUND */
+
 			// create background element
 			this.background = document.createElement('div');
 			this.background.className = 'Candidate-background';
 			this.element.appendChild(this.background);
 
-			// set background image
-			this.background.style.backgroundImage = 'url(' + this.photoURL + ')';
-
 			// add overlay to background
 			this.overlay = document.createElement('div');
 			this.overlay.className = 'Candidate-overlay';
 			this.background.appendChild(this.overlay);
+
+			// add candidate title to background (name)
+			this.title = document.createElement('div');
+			this.title.className = 'Candidate-title';
+			this.titleSpan = document.createElement('span');
+			this.titleSpan.innerText = this.name;
+			this.title.appendChild(this.titleSpan);
+			this.background.appendChild(this.title);
+
+			// add image element to background
+			this.image = document.createElement('div');
+			this.image.className = 'Candidate-image';
+			this.background.appendChild(this.image);
+
+			// set image background
+			this.image.style.backgroundImage = 'url(' + this.photoURL + ')';
+
+			/* INNER */
 
 			// create inner element
 			this.inner = document.createElement('div');
@@ -248,6 +265,9 @@ var Match = (function () {
 				// candidate instance
 				var candidate = new Candidate(candidateElement, candidateRef, candidateVoteButton);
 
+				// add direction style to candidate (left, right)
+				candidate.classList = 'left';
+
 				// push to candidates array the new
 				candidates.push(candidate);
 
@@ -303,6 +323,124 @@ var Match = (function () {
 	};
 
 	return Match;
+
+})();
+
+/* Vote Button */
+
+var VoteButton = (function () {
+
+	/**
+	 * Vote Button constructor
+	 * @constructor
+	 */
+	function VoteButton(matchKey, candidateKey) {
+
+		var self = this;
+
+		this.matchKey = matchKey;
+		this.candidateKey = candidateKey;
+
+		this.vote = function (event) {
+
+			if (self.delay)
+				clearTimeout(self.delay);
+
+			self.delay = setTimeout(function () {
+
+				var vote = new Vote(self.matchKey, self.candidateKey);
+				vote.send();
+
+			}, 1000);
+
+		};
+
+		this.onClick = function () {
+
+			self.vote();
+
+		};
+
+		this.onTouchStart = function () {
+
+			self.vote();
+
+			try {
+
+				window.navigator.vibrate(200);
+				self.doBeep();
+
+			} catch (e) { }
+
+		};
+
+		this.init();
+
+	}
+
+	VoteButton.prototype.delay = false;
+
+	VoteButton.prototype.audio = new Audio('../audio/music_marimba_chord.wav');
+
+	VoteButton.prototype.doBeep = function () {
+
+		if (this.audio) {
+
+			// stop audio
+			this.audio.pause();
+			this.audio.currentTime = 0;
+
+			// play audio
+			this.audio.play();
+
+		}
+
+	};
+
+	VoteButton.prototype.build = function (candidate) {
+
+		// normalize element
+		this.element.innerHTML = '';
+		this.element.className = 'Button';
+
+		// create button pill element
+		this.pill = document.createElement('span');
+		this.pill.className = 'Button-pill';
+		this.element.appendChild(this.pill);
+
+		// create button pill span element (text 'votar!')
+		this.pillSpan = document.createElement('span');
+		this.pillSpan.innerText = 'Votar!';
+		this.pill.appendChild(this.pillSpan);
+
+		// create button span element
+		this.label = document.createElement('span');
+		this.label.className = 'Button-label';
+		this.element.appendChild(this.label);
+
+		// create button span span element (candidate title)
+		this.labelSpan = document.createElement('span');
+		this.labelSpan.innerText = candidate.name;
+		this.label.appendChild(this.labelSpan);
+
+	};
+
+	VoteButton.prototype.init = function () {
+
+		// create button element
+		this.element = document.createElement('button');
+
+		try {
+
+			// add event listeners to element
+			this.element.addEventListener('click', this.onClick, false);
+			this.element.addEventListener('touchstart', this.onTouchStart, false);
+
+		} catch (e) { }
+
+	};
+
+	return VoteButton;
 
 })();
 

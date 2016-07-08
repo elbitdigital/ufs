@@ -64,6 +64,9 @@ var Match = (function () {
 				// candidate instance
 				var candidate = new Candidate(candidateElement, candidateRef, candidateVoteButton);
 
+				// add direction style to candidate (left, right)
+				candidate.classList = 'left';
+
 				// push to candidates array the new
 				candidates.push(candidate);
 
