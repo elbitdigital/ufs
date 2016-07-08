@@ -9,6 +9,7 @@
   margin: 1em auto;
   width: 100%;
   max-width: 35em;
+  display: none;
 }
 
 .AdminHeader {
@@ -27,6 +28,17 @@
 
 .AdminHeader-inner {
   padding: 0 1em;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row;
+}
+
+.AdminHeader-inner .flx-column {
+  margin-left: 2em;
+  flex-flow: column;
 }
 
 .AdminLogo {
@@ -138,14 +150,30 @@
   width: 100%;
 }
 
-.AdminApp .is-expanded,
-.AdminApp .is-visible {
+.AdminHeader-inner .Status {
+  border-radius: 1px;
+  color: #ffffff;
+  background-color: #d50000;
+  line-height: 1.5em;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 0 .5em;
+}
+
+.is-online {
+  background-color: #2e7d32 !important;
+}
+
+.is-expanded,
+.is-visible,
+.is-logged-in {
   display: block !important;
 }
 
-.AdminApp .is-hide {
+.is-hide {
   display: none !important;
 }
+
 /* App Screen */
 
 .AppScreen {
