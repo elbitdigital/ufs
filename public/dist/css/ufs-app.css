@@ -543,6 +543,7 @@
   width: 100%;
 }
 .Modal {
+  font-family: "jaf-bernino-sans-comp", sans-serif;
   height: 100vh;
   position: fixed;
   width: 100%;
@@ -605,8 +606,45 @@
 }
 
 .Modal-inner {
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-flow: column;
+  flex-flow: column;
   background-color: #efefef;
   padding: 1em;
+}
+
+.Modal.is-shown h2 {
+  font-weight: 800;
+  margin-bottom: 1em;
+}
+
+.Modal p {
+  font-size: 2.25em;
+  opacity: 0;
+  -webkit-transition: opacity 1.5s;
+  -moz-transition: opacity 1.5s;
+  -ms-transition: opacity 1.5s;
+  -o-transition: opacity 1.5s;
+  transition: opacity 1.5s;
+}
+
+/* TRANSIÇÕES */
+
+.Modal.is-shown p {
+  opacity: 1;
+}
+
+.Modal img {
+  display: block;
+  max-width: 6em;
 }
 /* Voting Box */
 
