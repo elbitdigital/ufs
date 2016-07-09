@@ -86,11 +86,11 @@
 .Modal p {
 	font-size: 2.25em;
 	opacity: 0;
-	-webkit-transition: opacity 1.5s;
-	-moz-transition: opacity 1.5s;
-	-ms-transition: opacity 1.5s;
-	-o-transition: opacity 1.5s;
-	transition: opacity 1.5s;
+	-webkit-transition: opacity .6s;
+	-moz-transition: opacity .6s;
+	-ms-transition: opacity .6s;
+	-o-transition: opacity .6s;
+	transition: opacity .6s;
 }
 
 /* TRANSIÇÕES */

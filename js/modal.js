@@ -41,7 +41,7 @@ var Modal = (function () {
 
 			self.element.classList.add('is-shown');
 
-		}, 800);
+		}, 50);
 
 	};
 
