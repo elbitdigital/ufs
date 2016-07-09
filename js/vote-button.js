@@ -19,10 +19,18 @@ var VoteButton = (function () {
 			if (self.delay)
 				clearTimeout(self.delay);
 
+			modal.show();
+
 			self.delay = setTimeout(function () {
 
 				var vote = new Vote(self.matchKey, self.candidateKey);
 				vote.send();
+
+				setTimeout(function () {
+
+					modal.hide();
+
+				}, 2000);
 
 			}, 1000);
 

@@ -56,7 +56,7 @@ source.index = {
 
 source.images = {
 	content: '*.*',
-	location: source.location + 'img/'
+	location: source.location + 'img/Logo/'
 };
 
 source.images.largePhotos = {
@@ -132,10 +132,10 @@ gulp.task('js-watch', ['js'], function () {
 gulp.task('resizePhotos', function () {
 	gulp.src(source.images.location + source.images.content)
 		.pipe(imageResize({
-			height : 960,
+			height : 384,
 			upscale : false
 		}))
-		.pipe(gulp.dest(dist.location + source.images.largePhotos.location));
+		.pipe(gulp.dest(dist.location + 'img/'));
 });
 
 gulp.task('tinyPhotosSource', function () {

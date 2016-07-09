@@ -26,6 +26,13 @@ var Vote = (function () {
 			this.key = votesRef.push(this).key;
 			console.log(this.key);
 
+			ga('send', 'event', {
+				eventCategory: 'Voto',
+				eventAction: this.match,
+				eventLabel: this.candidate,
+				eventValue: 1
+			});
+
 		} catch (e) { }
 
 	};

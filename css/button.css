@@ -5,13 +5,17 @@
 	background: none;
 	border: none;
 	border-radius: 0;
+	bottom: 1em;
 	cursor: pointer;
+	display: block;
 	font-family: "jaf-bernino-sans-comp", sans-serif;
 	outline: 0;
-	display: block;
 	position: absolute;
 	right: 1em;
-	bottom: 1em;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 /* Button label */

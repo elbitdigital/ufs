@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<meta charset="UTF-8">
+<title></title>
+<meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+<script src="dist/js/villa.min.js"></script>
+<link rel="stylesheet" href="dist/css/villa.min.css"/>
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
+<link rel="stylesheet" type="text/css" href="dist/css/villa-cross.min.css"/>
+<script src="dist/js/html5shiv.js"></script>
+<script src="dist/js/html5shiv-printshiv.js"></script>
+<script src="dist/js/classList.min.js"></script>
+<![endif]-->
+
+<style>
+
+	.MatchResult {
+		border-radius: 4px;
+		background-color: #efefef;
+		width: 100%;
+		max-width: 36em;
+		padding: 1em 1em;
+		margin: 1em auto;
+	}
+
+	.MatchResult h4 {
+		margin-bottom: 1em;
+	}
+
+	.CandidateResult {
+		padding: 0 1em;
+	}
+
+	.CandidateResult-name {
+		font-weight: 900;
+	}
+
+</style>
+
+<body>
+
+<main id="app" class="ResultApp"></main>
+
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+
+<script>
+
+	// Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyAPBMowmgiW0V1H3FDlJ6GBLQHDq7RX3kg",
+		authDomain: "ufs-app.firebaseapp.com",
+		databaseURL: "https://ufs-app.firebaseio.com",
+		storageBucket: "ufs-app.appspot.com"
+	};
+
+	firebase.initializeApp(config);
+
+</script>
+
+<script>
+
+	/* Result */
+
+	var Result = (function () {
+
+		/**
+		 * Result constructor
+		 * @constructor
+		 */
+		function Result(match) {
+
+			var self = this;
+
+			this.match = match;
+
+			this.element = document.createElement('div');
+			this.element.className = 'MatchResult';
+
+			this.matchTitle = document.createElement('h4');
+			this.matchTitle.innerText = this.match.title;
+			this.element.appendChild(this.matchTitle);
+
+			this.init();
+
+		}
+
+		Result.prototype.buildCandidate = function (candidate) {
+
+			var element = document.createElement('div');
+			element.className = 'CandidateResult';
+
+			var candidateName = document.createElement('span');
+			candidateName.className = 'CandidateResult-name';
+			candidateName.innerText = candidate.name + ': ';
+			element.appendChild(candidateName);
+
+			var votesTotal = document.createElement('span');
+			votesTotal.className = 'CandidateResult-votes';
+			votesTotal.innerText = candidate.votes.length + ' votos ';
+			element.appendChild(votesTotal);
+
+			return element;
+
+		};
+
+		Result.prototype.init = function () {
+
+			for (var candidate in this.match.candidates)
+				if (this.match.candidates.hasOwnProperty(candidate))
+					this.element.appendChild(this.buildCandidate(this.match.candidates[candidate]));
+
+			app.element.appendChild(this.element);
+
+		};
+
+		return Result;
+
+	})();
+
+</script>
+
+<script>
+
+	var app = {
+		element: document.getElementById('app')
+	};
+
+	// pega as referencias
+	var databaseRef = firebase.database().ref();
+	var votesRef = databaseRef;
+
+	// variaveis globais de dados
+	var data = {
+		candidates: false,
+		matches: false,
+		votes: false
+	};
+
+	// listener de value change do database
+	votesRef.on('value', function (snap) {
+
+		// reseta o body sempre que atualizar o banco
+		app.element.innerHTML = '';
+
+		// converte objeto votes em array
+		data.votes = function () {
+
+			var votes = [];
+
+			for (var i in snap.val().votes)
+				if (snap.val().votes.hasOwnProperty(i)) {
+
+					var vote = snap.val().votes[i];
+					vote.key = i;
+
+					votes.push(vote);
+
+				}
+
+			return votes;
+
+		}();
+
+		// converte objeto matches em array
+		data.matches = function () {
+
+			var matches = [];
+
+			for (var i in snap.val().matches)
+				if (snap.val().matches.hasOwnProperty(i)) {
+
+					var match = snap.val().matches[i];
+					match.key = i;
+
+					matches.push(match);
+
+				}
+
+			return matches;
+
+		}();
+
+		// converte objeto matches em array
+		data.candidates = function () {
+
+			var candidates = [];
+
+			for (var i in snap.val().candidates)
+				if (snap.val().candidates.hasOwnProperty(i)) {
+
+					var candidate = snap.val().candidates[i];
+					candidate.key = i;
+
+					candidates.push(candidate);
+
+				}
+
+			return candidates;
+
+		}();
+
+		// AGORA SIM!
+
+		// pega informações de candidate
+		function getCandidate(candidateKey) {
+
+			for (var i = data.candidates.length; i--; )
+				if (data.candidates[i].key == candidateKey)
+					return data.candidates[i];
+
+		}
+
+		// loop para obter dados e criar instancia de apresentação
+		for (var i = data.matches.length; i--; ) {
+
+			// obtem match
+			var match = data.matches[i];
+
+			// obtem candidates
+			var candidates = match.candidates;
+
+			// array de votos do match
+			var matchVotes = [];
+
+			// coleta votos referentes a key deste match
+			for (var j = data.votes.length; j--; )
+				if (data.votes[j].match == match.key)
+					matchVotes.push(data.votes[j]);
+
+			// coleta votos referentes aos candidatos com base nos votos do match
+			for (var candidate in candidates)
+				if (candidates.hasOwnProperty(candidate)) {
+
+					// get candidate data
+					candidates[candidate] = getCandidate(candidate);
+					candidates[candidate].votes = [];
+
+					for (var k = matchVotes.length; k--; )
+						if (candidate == matchVotes[k].candidate)
+							candidates[candidate].votes.push(matchVotes[k]);
+
+				}
+
+
+			// cria instancia de instancias de dados do match
+			var result = new Result(match);
+
+		}
+
+	});
+
+</script>
+
+</body>
+
+</html>

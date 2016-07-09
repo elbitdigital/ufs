@@ -15,9 +15,9 @@
 				h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
 	})(document);
 </script>
-
 <script src="dist/js/villa.min.js"></script>
 <link rel="stylesheet" href="dist/css/villa.min.css"/>
+<link rel="stylesheet" href="dist/css/ufs-app.css"/>
 <!--[if lt IE 9]>
 <link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
 <link rel="stylesheet" type="text/css" href="dist/css/villa-cross.min.css"/>
@@ -26,7 +26,23 @@
 <script src="dist/js/classList.min.js"></script>
 <![endif]-->
 
-<link rel="stylesheet" type="text/css" href="../css/admin.css"/>
+<style>
+
+	.is-online {
+		background-color: #2e7d32 !important;
+	}
+
+	.is-expanded,
+	.is-visible,
+	.is-logged-in {
+		display: block !important;
+	}
+
+	.is-hide {
+		display: none !important;
+	}
+
+</style>
 
 <body class="grey-100 tk-fira-sans">
 

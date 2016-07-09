@@ -154,17 +154,3 @@
 	font-weight: bold;
 	padding: 0 .5em;
 }
-
-.is-online {
-	background-color: #2e7d32 !important;
-}
-
-.is-expanded,
-.is-visible,
-.is-logged-in {
-	display: block !important;
-}
-
-.is-hide {
-	display: none !important;
-}

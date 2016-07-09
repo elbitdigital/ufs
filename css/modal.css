@@ -1,0 +1,67 @@
+
+.Modal {
+	height: 100vh;
+	position: fixed;
+	width: 100%;
+	top: 100%;
+	z-index: 10;
+}
+
+.Modal.is-active {
+	top: 0;
+}
+
+.Modal-backdrop {
+	background: rgba(0,0,0,.8);
+	height: 100%;
+	opacity: 0;
+	position: absolute;
+	-webkit-transition: opacity .3s;
+	-moz-transition: opacity .3s;
+	-ms-transition: opacity .3s;
+	-o-transition: opacity .3s;
+	transition: opacity .3s;
+	width: 100%;
+}
+
+.Modal.is-shown .Modal-backdrop {
+	opacity: 1;
+}
+
+.Modal-body {
+	-webkit-align-items: center;
+	align-items: center;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	height: 100%;
+	position: absolute;
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	-o-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition: transform .6s .2s;
+	-moz-transition: transform .6s .2s;
+	-ms-transition: transform .6s .2s;
+	-o-transition: transform .6s .2s;
+	transition: transform .6s .2s;
+	width: 100%;
+}
+
+.Modal.is-shown .Modal-body {
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+	transform: translateY(0);
+}
+
+.Modal-inner {
+	background-color: #efefef;
+	padding: 1em;
+}
