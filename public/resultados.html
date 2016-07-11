@@ -123,6 +123,7 @@
 
 <script>
 
+	// cria objeto global do app
 	var app = {
 		element: document.getElementById('app')
 	};
@@ -237,6 +238,7 @@
 					candidates[candidate] = getCandidate(candidate);
 					candidates[candidate].votes = [];
 
+					// get candidate votes
 					for (var k = matchVotes.length; k--; )
 						if (candidate == matchVotes[k].candidate)
 							candidates[candidate].votes.push(matchVotes[k]);
