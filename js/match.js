@@ -91,8 +91,6 @@ var Match = (function () {
 
 	Match.prototype.destroy = function() {
 
-		console.log('destruindo match');
-
 		try {
 
 			this.destroyAllCandidates();

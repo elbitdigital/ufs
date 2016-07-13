@@ -19,18 +19,13 @@ var VotingBox = (function () {
 
 		this.onCurrentValueChange = function (snap) {
 
-			var current = snap.val();
+			self.current = snap.val();
 
-			if (current) {
+			if (self.match)
+				self.match.destroy();
 
-				self.current = current;
-
-				if (self.match)
-					self.match.destroy();
-
-				self.match = new Match(document.getElementById('match'), self.rootRef.ref('matches').child(current));
-
-			}
+			if (self.current)
+				self.match = new Match(document.getElementById('match'), self.rootRef.ref('matches').child(self.current));
 
 		};
 
