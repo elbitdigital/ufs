@@ -1,0 +1,1024 @@
+{
+  "candidates" : {
+    "-KM0mwj9vRlVTuthrs1Z" : {
+      "name" : "JHONATAN & LIDIANE",
+      "photoURL" : "https://firebasestorage.googleapis.com/v0/b/ufs-app.appspot.com/o/candidatePhoto%2Fteste-esq.png?alt=media&token=76712f95-14c1-4e1e-8f98-da8970f08200",
+      "slug" : "jhonatan-e-lidiane"
+    },
+    "-KM0n7Ws7EubYTH_Zkgq" : {
+      "name" : "MURILO VIOLA",
+      "photoURL" : "https://firebasestorage.googleapis.com/v0/b/ufs-app.appspot.com/o/candidatePhoto%2Fteste-dir.png?alt=media&token=d8a6b3b8-ba78-4d40-ba91-82fb8c113a98",
+      "slug" : "murilo-viola"
+    }
+  },
+  "current" : "-KM0mwBMXvGBZL8Rsx_O",
+  "matches" : {
+    "-KM0mwBMXvGBZL8Rsx_O" : {
+      "candidates" : {
+        "-KM0mwj9vRlVTuthrs1Z" : true,
+        "-KM0n7Ws7EubYTH_Zkgq" : true,
+        "-KMZhtQAFbWL-v7vKN-c" : true
+      },
+      "isActive" : true,
+      "title" : "JHONATAN & LIDIANE VS MURILO VIOLA"
+    }
+  },
+  "votes" : {
+    "-KMCeZ1LifX91HJKwipe" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468034334047,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCe_9XqoeVhoMb6a7y" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468034338723,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCek-ILgLTqFWHJPKS" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468034383124,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCel-2cmzQP8bkmIrH" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468034387204,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCem-wDzs-1q2HWqlg" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468034391357,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCen8AW3B7eAlPTJRq" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468034395981,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCeoAjHUjiwUcaYjk3" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468034400238,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCf8alPoWMgQ6S_uil" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468034487986,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMChNSDSx6wY94nxydd" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468035073103,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCmQP4UJYQXN9D2Iy-" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468036395886,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCoZbCNJEf5cD7Wkxg" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468036957901,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCo___v11NB5X1nQMb" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468036961891,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCoacKOL6aTeahe--u" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468036966165,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCobhLN_GZy2eWjW0h" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468036970554,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCoch3J4DsqB8cSdC3" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468036974661,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCofIwgP0CgEra9ANs" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468036985340,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCogI1rz71qfggSyVW" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468036989378,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCoiGD6YcCVLwi3-aX" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468036997454,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMColchWv-Cmrxsk2jx" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468037011245,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMConsQS5mEd9Go0vCy" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468037020438,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCosIA-5zX-THUOFAC" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468037038539,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCotg1WLjA_3n2xT_H" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468037044224,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCov-IfjF4uaagxjlM" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468037049619,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCow2Vi-ACPOcv2dMx" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468037053920,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCoxK_FG635LIf1_WR" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468037059173,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCpSTnSihdPzEGvfHk" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468037190835,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCpflPwiRSMX7nweld" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468037249366,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCqN8yemVOXSk0Mtfd" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468037431166,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCqOAjyKHX9Mus30Mw" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468037435369,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCqPp7_XqsoWm0H_1z" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468037442120,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCqQygSCtum9PW3d1O" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468037446828,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCqRz7-dWhrApoJXOe" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468037450953,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCu8ZuUG3kCJRgUtb7" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468038419995,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCu9ddG2x9jl-4kexv" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468038424395,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCuAs5MohJfo-AvmpR" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468038429415,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCuBsAxtoK9m6Ut89e" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468038433517,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCuCn54DLQ4wDyU_8I" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468038437288,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCuDoD0J1M3MEXI0kj" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468038441455,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCuEp9J-65kUhmQFUP" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468038445608,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCuFp3lF5kJ7YJKOYz" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468038449694,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCuGq2jFxa5iC-AkKm" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468038453861,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCuHl6vUdrycgLLpp8" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468038457640,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCuIhFxp2CPieuQMxT" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468038461489,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCuJgJM-4jS7uPm-i8" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468038465525,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCuKcJIkg6szhmoExM" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468038469366,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCuLXK5szSNMUMeFD_" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468038473079,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCuYubsq_74nR0eIPd" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468038527879,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCuZu08d4uPZBmlWwZ" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468038531938,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCumnB-acq9wTDLBF9" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468038588841,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCurQomWLKb5TeDNol" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468038607829,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCvA7Tn1ldrdIxMXOF" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468038688508,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMCvBJ13eqVX2Q9fi0H" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468038693347,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMD6CdDOXRiBGqvHFuB" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468041845327,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMD6DbS4j6zYTHdAXoG" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468041849446,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMD6EVzTn0bDowEpT9P" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468041853127,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMD6FRKyYPkUXSSgBHa" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468041856926,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMD6GKmBt0v2f0zSi3M" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468041860603,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMD6HMs3s49_tchbsg0" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468041864833,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMD6ITfz7rcBHZ-5I3w" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468041869364,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMD6JTOIt9V2Re04Dgb" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468041873442,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMD6KPx8OfRQH6ZN2HD" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468041877318,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMD6LUCfO7GgMQUtOSE" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468041881557,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMD6MS6VTY6ZkKp9DbY" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468041885647,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMD6NQlk0dBZ0NccQRj" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468041889648,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMD6RkxG0FaSpetfu93" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468041907397,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMD6Sj7o4ayB8dxkvFa" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468041911363,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMD6TsKIjttrL4tpsJO" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468041916062,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMD6WoHwxK2xuA1xqmQ" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468041928065,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMD6XvRe720im0ty2uq" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468041932645,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMD6YuUmsS1vzEowEwf" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468041936681,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMD6Zp3_3iREiS1UPAp" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468041940430,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMD8B1lOHx1oqPqK2wI" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468042363195,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMD8BynxfwHvw4Dmrh8" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468042367031,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMD8CtyaR3ZYhO7ZtDL" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468042370823,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMD8Dp-JwMY7ruKBMHR" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468042374601,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMD8Eo9o-AWygun9HGy" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468042378643,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMD8FlAffg5YveZNYwE" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468042382548,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMD8GiS-KRV_jtH-NK4" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468042386465,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDC2R_tSQhXWBs9lo_" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468043376558,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDC5N-Z39-BdRTtsix" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468043388547,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDC6RVrF36R3baj_4U" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468043392937,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDCKVZvNJDn31caujq" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468043450540,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDGh9WV-vW_Uzo_DE9" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044596016,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDGkPvbwQGPshHrBbo" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044609353,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDGmGxpBBCTuDNoT3E" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044616971,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDGnAdvZYJzTPQT9GK" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044620663,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDGoicvCJHS0FPBuxK" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044626999,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDGq9IMwlsccjpbibX" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044632865,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDGrcpMrvX95cLCNJG" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044638916,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDGt21slyTzih8rBJl" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044644688,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDGu3bFYz_FaAmepPd" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044648886,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDGv85qA9Z88MUQaZ-" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044653261,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDGwAwIDgryFOT9dJO" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044657547,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDGxxNgV4Blzrt9jwh" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044664807,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDGztKYdfCLsfYu9LV" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044672739,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDH0XsNDcVqL5cCECJ" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044679494,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDH1XVgnBlNoBTFY7X" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044683561,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDH2hVazzNZHDUqkBF" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044688367,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDH3swSFtq8jX5R4EV" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044693195,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDH6DVSCeodfBYToTy" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044702767,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDH7ILfx6nU7tN2U0b" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044707173,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDH8U5wXkQDQxvM0FL" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044712021,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDHB-8Y16Vym2lEf9Z" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044722327,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDHEguO2wi8nWXFLmu" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044737480,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDHJ4G8fbnql1qMv1k" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044755424,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDHKGYcVDQ9zauF_vZ" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044760305,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDHMX6fB-T7YlaYSBI" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044769558,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDHNu1ZHfPwf40jXEf" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044775185,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDHQ16VTd238G1cAJk" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044783891,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDHRpm2mkiAb7XxHPH" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044791296,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDHZCFWCi-2RQQrNF4" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044821471,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDHaxFlJwUJRd9Xzse" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044832734,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDHdRwah-npyqzpAqk" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044842955,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDHeVinpNBHiCiv6TE" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044847292,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDHfdgTQX7OwkALJXN" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044851963,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDHjMaXH5eoEUCGKex" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044867189,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDHodwveX07HkRDck_" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044888842,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDHpv5_PyPSK3PzQmH" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044894037,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDHqzWnlN81k8W4d7R" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044898415,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDHz4eABRJKAiAaqFh" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044931577,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDI05Wgd1vNI_Y8IE7" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044939824,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDI5QVkzhIhMrDC2Gg" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044961647,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDI6OVISQOi8m_5lOR" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044965614,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDIBaEdd1uJpwtgGy4" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468044986910,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDIHBRBMJ5Scphuke9" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468045009833,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDIIta4b2dFhy3Jgdu" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468045016820,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDILD_BpUq3GmUijOJ" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468045026356,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDIMWO_Sw0GIkaXxaI" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468045031655,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDIOnuU4eLViIb19mB" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468045041032,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDIQBZBUBJz0SOMF2d" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468045046707,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDIW_jp_ciA0bR7Nln" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468045072893,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDIY0MJBOyZjkhz_P4" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468045078757,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDI_Ji42UV7Y9UdsKA" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468045088188,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDIe9m3OP4-ySNcPNg" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468045108031,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDIunOfYTcGNEp0VUV" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468045176168,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDIwGzCxmuHl7PVDN_" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468045182221,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDIxGVKIJfdhf_ix_j" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468045186287,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDJ1V0SlvlS44n3Vmo" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468045207696,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDJ2yEoZzdP03MPEEm" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468045213725,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDJ5wQ0XRHTZVGLmhP" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468045225898,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDJ742xJpEaltVqvRd" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468045230545,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDJ98FJ6ZezvFzsffP" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468045239007,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDJAeDrxM2V4QFDBQl" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468045245212,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDJFhodH0u9S_7cXgr" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468045265922,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDJQbeuNs6-MZThS3W" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468045310585,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDJSCcCEi7fG53_7Mj" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468045317017,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDKB0Cv9Gwmw2A5zTp" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468045508734,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDKC4AFmC4M63Dqsp0" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468045513084,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDKHfk8I6z25uGmHmB" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468045536033,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDKIkQwtverrTY36XE" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468045540427,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDKYAgi576U2qhgl6m" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468045603614,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDKibmdIuDICwKsLAV" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468045650468,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDKniJ97m6vYRl9AzO" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468045671366,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDMmrQrxhDjwfguysb" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468046192140,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDMp7Bb064d0wLB2T-" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468046201406,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDMqmkd3bv0dCmKATo" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468046208226,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDNuiZlWWqxcw_LEzw" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468046486485,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDOekoQ0p1CbUARyxi" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468046683237,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDP9XfZEwMJfjB4v52" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468046813404,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDPB4u7EnvK-xbrE8f" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468046819755,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDQFxeCf6Td945lSkI" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468047101758,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDQH0wps1e_Oct2zaY" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468047106128,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDQIEJhEKGLRzJVIo_" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468047111081,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDSM-p9_1Sa_7xEYYh" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468047650825,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDSNTgPXcXQHJMRPUI" : {
+      "candidate" : "-KM0n7Ws7EubYTH_Zkgq",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468047656832,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    },
+    "-KMDSOzd2r_V9Y_Wffm1" : {
+      "candidate" : "-KM0mwj9vRlVTuthrs1Z",
+      "match" : "-KM0mwBMXvGBZL8Rsx_O",
+      "timestamp" : 1468047663038,
+      "userAgent" : "Mozilla/5.0 (Linux; Android 4.4.2; M7SQC.v1.3 Build/M7SQC.SDK2.1_V4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.81 Safari/537.36"
+    }
+  }
+}

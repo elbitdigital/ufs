@@ -2,7 +2,7 @@
   "rules": {
     ".read": true,
     "current": {
-      ".write": "auth == null"
+      ".write": "auth != null"
     },
     "candidates": {
       ".write": true

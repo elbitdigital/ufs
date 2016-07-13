@@ -5,7 +5,7 @@
 <meta name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
 
-<script>
+<!--<script>
 	(function(d) {
 		var config = {
 					kitId: 'wbk2jny',
@@ -14,10 +14,10 @@
 				},
 				h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
 	})(document);
-</script>
+</script>-->
 <script src="dist/js/villa.min.js"></script>
 <link rel="stylesheet" href="dist/css/villa.min.css"/>
-<link rel="stylesheet" href="dist/css/ufs-app.css"/>
+<!--<link rel="stylesheet" href="dist/css/ufs-app.css"/>-->
 <!--[if lt IE 9]>
 <link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
 <link rel="stylesheet" type="text/css" href="dist/css/villa-cross.min.css"/>
@@ -27,6 +27,179 @@
 <![endif]-->
 
 <style>
+	/* Admin class stylesheets */
+
+	.AdminApp {
+		margin: 1em auto;
+		width: 100%;
+		max-width: 35em;
+		display: none;
+	}
+
+	.AdminHeader {
+		align-items: center;
+		-webkit-align-items: center;
+		/*background-color: #bdbdbd;*/
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		justify-content: space-between;
+		-webkit-justify-content: space-between;
+		padding: 1em 0;
+	}
+
+	.AdminHeader-inner {
+		padding: 0 1em;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		flex-flow: row;
+	}
+
+	.AdminHeader-inner .flx-column {
+		height: 100%;
+		margin-left: 2em;
+		flex-flow: column;
+	}
+
+	.AdminLogo {
+		max-height: 3.75em;
+		width: auto;
+	}
+
+	.AdminApp .Button,
+	.AdminHeader .Button {
+		background-color: #424242;
+		border-radius: 2px;
+		border: none;
+		-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+		-moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+		box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+		color: #ffffff;
+		cursor: pointer;
+		text-transform: uppercase;
+		-webkit-transition: all .3s;
+		-moz-transition: all .3s;
+		-ms-transition: all .3s;
+		-o-transition: all .3s;
+		transition: all .3s;
+		font-weight: bold;
+	}
+
+	.AdminApp .Button {
+		font-size: 12px;
+		height: 2.5em;
+		margin: .5em;
+		padding: 0 .5em;
+	}
+
+	.AdminHeader .Button {
+		font-size: 10px;
+		height: 2em;
+		padding: 0 .3em;
+	}
+
+	.AdminApp .Button:hover,
+	.AdminApp .Button:active,
+	.AdminApp .Button:focus,
+	.AdminHeader .Button:hover,
+	.AdminHeader .Button:active,
+	.AdminHeader .Button:focus {
+		-webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.1);
+		-moz-box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
+		box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
+	}
+
+	.AdminApp .Button:hover,
+	.AdminHeader .Button:hover {
+		background-color: #757575;
+	}
+
+	.AdminApp .Button:active,
+	.AdminApp .Button:focus,
+	.AdminHeader .Button:active,
+	.AdminHeader .Button:focus {
+		background-color: #616161;
+	}
+
+	.AdminApp .Current {
+		position: fixed;
+		top: 10px;
+		right: 10px;
+	}
+
+	.AdminApp .Candidate {
+		background-color: #eeeeee;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: column;
+		flex-flow: column;
+		padding: 1em;
+		margin: .5em 0;
+	}
+
+	.AdminApp .Candidate input {
+		border: solid 4px #424242;
+		border-radius: 0;
+		margin-bottom: 1em;
+		padding: 1em;
+	}
+
+	.AdminApp .Match {
+		background-color: #bdbdbd;
+		margin-bottom: 1em;
+		padding: 1em;
+		position: relative;
+	}
+
+	.AdminApp .Match-current {
+		display: none;
+		border-radius: 1px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		color: #ffffff;
+		background-color: #2e7d32;
+		line-height: 1.5em;
+		font-size: 11px;
+		font-weight: bold;
+		margin: .5em;
+		padding: 0 .5em;
+	}
+
+	.AdminApp .Match-delete {
+		background-color: #d50000;
+	}
+
+	.AdminApp .Matches {
+		margin-top: 1em;
+		display: none;
+	}
+
+	.AdminApp .Matches input {
+		border: solid 2px #424242;
+		border-radius: 0;
+		margin-bottom: 1em;
+		padding: .25em .5em;
+		width: 100%;
+	}
+
+	.AdminHeader-inner .Status {
+		border-radius: 1px;
+		color: #ffffff;
+		background-color: #d50000;
+		line-height: 1.5em;
+		font-size: 11px;
+		font-weight: bold;
+		padding: 0 .5em;
+	}
 
 	.is-online {
 		background-color: #2e7d32 !important;
@@ -44,7 +217,7 @@
 
 </style>
 
-<body class="grey-100 tk-fira-sans">
+<body class="grey-100">
 
 <header class="AdminHeader">
 
@@ -53,7 +226,7 @@
 		<img src="dist/img/JesseJamesLogo--preto.png" class="AdminLogo" />
 		<div class="flx-column">
 			<h2 id="Status" class="Auth Status"></h2>
-			<button id="Sign-in" class="Auth Sign-in"></button>
+			<button id="Sign-in" class="Button Auth Sign-in"></button>
 		</div>
 	</div>
 
@@ -63,7 +236,7 @@
 <main id="AdminApp" class="AdminApp">
 
 	<button id="newMatch" class="Button">Criar disputa</button>
-	<button id="showMatches" class="Button">Recolher disputas &#x25B4</button>
+	<button id="showMatches" class="Button">Recolher disputas</button>
 	<span id="current" class="Current"></span>
 	<div id="matches" class="Matches is-expanded"></div>
 
@@ -95,6 +268,7 @@
 		if (!firebase.auth().currentUser) {
 			var provider = new firebase.auth.FacebookAuthProvider();
 			firebase.auth().signInWithRedirect(provider);
+			alert('pão');
 		} else {
 			firebase.auth().signOut();
 		}
@@ -120,11 +294,18 @@
 		firebase.auth().onAuthStateChanged(function(user) {
 			if (user) {
 				/* TO-DO: Restrict database rules to database insert when its current updated */
-				document.getElementById('Status').classList.toggle('is-online');
+				if (!document.getElementById('Status').classList.contains('is-online')) {
+					document.getElementById('Status').classList.add('is-online')
+				}
 				document.getElementById('Status').innerText = 'Online';
 				document.getElementById('Sign-in').innerText = 'Sair';
-				document.getElementById('AdminApp').classList.toggle('is-logged-in');
+				if (!document.getElementById('AdminApp').classList.contains('is-logged-in')) {
+					document.getElementById('AdminApp').classList.add('is-logged-in');
+				}
 			} else {
+				if (document.getElementById('Status').classList.contains('is-online')) {
+					document.getElementById('Status').classList.remove('is-online')
+				}
 				document.getElementById('Status').innerText = 'Offline';
 				document.getElementById('Sign-in').innerText = 'Entrar com Facebook';
 				if (document.getElementById('AdminApp').classList.contains('is-logged-in')) {
@@ -363,13 +544,17 @@
 			}, false);
 
 			// Delete selected match
-			// TO-DO: confirmation dialog
-			this.deleteMatch.addEventListener('click', function() {
+			this.deleteMatch.addEventListener('click', function(e) {
 
-				if (firebase.database().ref('matches/' + self.matchID).set(null)) {
-					var parent = app.matches;
-					var child = document.getElementById(self.matchID);
-					var childOld = parent.removeChild(child);
+				var confirm = window.confirm("Deseja excluir a disputa?");
+				if (confirm == true) {
+					if (firebase.database().ref('matches/' + self.matchID).set(null)) {
+						var parent = app.matches;
+						var child = document.getElementById(self.matchID);
+						var childOld = parent.removeChild(child);
+					}
+				} else {
+					this.blur(); // return mouse state to default
 				}
 
 			}, false);
@@ -518,12 +703,14 @@
 						// Create an element and set its data for each candidate on the match
 						firebase.database().ref('candidates/' + candidateKey).once('value').then(function (snapCandidate) {
 
-							var candidate = new Candidate(document.createElement('div'), snapCandidate.key);
-							candidate.name.value = snapCandidate.val().name;
-							candidate.photoURL.value = snapCandidate.val().photoURL;
-							candidate.slug.value = snapCandidate.val().slug;
-							match.candidates.push(candidate);
-							match.element.appendChild(candidate.element);
+							try {
+								var candidate = new Candidate(document.createElement('div'), snapCandidate.key);
+								candidate.name.value = snapCandidate.val().name;
+								candidate.photoURL.value = snapCandidate.val().photoURL;
+								candidate.slug.value = snapCandidate.val().slug;
+								match.candidates.push(candidate);
+								match.element.appendChild(candidate.element);
+							} catch (e) {}
 
 						});
 
