@@ -1,4 +1,8 @@
 {
+  "admins" : {
+    "1" : true,
+    "2" : true
+  },
   "candidates" : {
     "-KM0mwj9vRlVTuthrs1Z" : {
       "name" : "JHONATAN & LIDIANE",
@@ -16,8 +20,7 @@
     "-KM0mwBMXvGBZL8Rsx_O" : {
       "candidates" : {
         "-KM0mwj9vRlVTuthrs1Z" : true,
-        "-KM0n7Ws7EubYTH_Zkgq" : true,
-        "-KMZhtQAFbWL-v7vKN-c" : true
+        "-KM0n7Ws7EubYTH_Zkgq" : true
       },
       "isActive" : true,
       "title" : "JHONATAN & LIDIANE VS MURILO VIOLA"
