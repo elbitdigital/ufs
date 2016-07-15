@@ -1,17 +1,26 @@
 {
   "rules": {
     ".read": true,
+    "admins": {
+      ".read": false,
+      ".write": false
+    },
     "current": {
-      ".write": "auth != null"
+      ".write": "root.child('admins/' + auth.uid).exists()"
     },
     "candidates": {
-      ".write": true
+      ".write": "root.child('admins/' + auth.uid).exists()"
     },
     "matches": {
+      ".write": "root.child('admins/' + auth.uid).exists()"
+    },
+    "page_views": {
       ".write": true
     },
     "votes": {
-      ".write": true
+      "$vote": {
+        ".write": "root.child('allowed').child(newData.child('hash').val()).exists()"
+      }
     }
   }
 }

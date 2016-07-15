@@ -149,6 +149,12 @@
 	var databaseRef = firebase.database().ref();
 	var votesRef = databaseRef.child('votes/');
 
+	try {
+
+		databaseRef.child('page_views').push({userAgent: window.navigator.userAgent, timestamp: Date.now()});
+
+	} catch (e) {}
+
 	var modal = false;
 	var ufs = false;
 

@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <meta charset="UTF-8">
-<title></title>
+<title>UFS - Resultados</title>
 <meta name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+<link rel="icon" type="image/png" href="dist/img/launcher-icon-2x.png" />
+
 <script src="dist/js/villa.min.js"></script>
 <link rel="stylesheet" href="dist/css/villa.min.css"/>
 <!--[if lt IE 9]>
@@ -37,6 +39,46 @@
 		font-weight: 900;
 	}
 
+	.DuelGraph {
+		width: 100%;
+		max-width: 25em;
+		margin: 1em auto;
+		background-color: #000;
+		height: 3em;
+	}
+
+	.DuelGraph-inner {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: row;
+		flex-flow: row;
+		-webkit-align-items: stretch;
+		align-items: stretch;
+	}
+
+	.DuelGraph-inner .Graph-candidate {
+		height: 3em;
+		background-color: #f44336;
+		text-align: center;
+
+	}
+
+	.DuelGraph-inner .Graph-candidate[data-status='first'] {
+		background-color: #8bc34a;
+	}
+
+	.DuelGraph-inner .Graph-candidate[data-status='draw'] {
+		background-color: #616161;
+	}
+
+	.DuelGraph-inner .Graph-candidate-label {
+		line-height: 3em;
+		color: #fff;
+	}
+
 </style>
 
 <body>
@@ -56,6 +98,115 @@
 	};
 
 	firebase.initializeApp(config);
+
+</script>
+
+<script>
+
+	/* Simple duel graph from match results */
+
+	var DuelGraph = (function () {
+
+		/**
+		 * Duel graph constructor
+		 *   votes param structure
+		 *    votes = {
+	     *        candidates: {
+	     *            0: { slug: '', votes: 0 },
+	     *            1: { slug: '', votes: 0 }
+	     *        },
+	     *        total: 0
+	     *    }
+		 *
+		 * @param votes votes block contain candidates votes and total votes *
+		 * @constructor
+		 */
+		function DuelGraph(votes) {
+
+			this.graph = {};
+			this.votes = votes;
+
+			if (this.votes)
+				this.init();
+
+		}
+
+		/**
+		 * Create graph for a duel between two candidates
+		 *
+		 *      graph element structure
+		 *      <div class="Duelgraph">
+		 *           <div class="DuelGraph-inner">
+		 *               <div class="Graph-candidate">
+		 *                   <span class="Graph-candidate-label">
+		 *                       Slug-candidate
+		 *                   </span>
+		 *               </div>
+		 *           </div>
+		 *       </div>
+		 *
+		 * @returns {Element|*}
+		 */
+		DuelGraph.prototype.buildGraph = function () {
+
+			this.element = document.createElement('div');
+			this.element.className = 'DuelGraph';
+
+			this.graph = document.createElement('div');
+			this.graph.className = 'DuelGraph-inner';
+
+			for(var i = 0; i < this.votes.candidates.length; i++) {
+
+				this.graphCandidate = document.createElement('div');
+				this.graphCandidate.className = 'Graph-candidate';
+				var percent = 0;
+
+				if (this.votes.candidates[0].votes != this.votes.candidates[1].votes) {
+					percent = this.calculatepercent(this.votes.candidates[i].votes, this.votes.total);
+					this.graphCandidate.style.width = percent + '%';
+				} else {
+					percent = '50';
+					this.graphCandidate.style.width = percent + '%';
+				}
+
+				if (percent > 50) {
+					this.graphCandidate.dataset.status = 'first';
+				} else if (percent < 50) {
+					this.graphCandidate.dataset.status = 'last';
+				} else {
+					this.graphCandidate.dataset.status = 'draw';
+				}
+
+				this.labelCandidate = document.createElement('span');
+				this.labelCandidate.className = 'Graph-candidate-label';
+				this.labelCandidate.innerText = percent + '%';
+
+				this.graphCandidate.appendChild(this.labelCandidate);
+				this.graph.appendChild(this.graphCandidate);
+
+			}
+
+			this.element.appendChild(this.graph);
+
+			return this.element;
+
+		};
+
+		DuelGraph.prototype.calculatepercent = function (quant, total) {
+
+			return Math.round(10 * (100 * quant / total)) / 10;
+
+		};
+
+		DuelGraph.prototype.init = function () {
+
+			this.buildGraph();
+
+		};
+
+		return DuelGraph;
+
+	})();
 
 </script>
 
@@ -82,6 +233,11 @@
 			this.matchTitle.innerText = this.match.title;
 			this.element.appendChild(this.matchTitle);
 
+			this.votes = {
+				candidates: [],
+				total: 0
+			};
+
 			this.init();
 
 		}
@@ -101,6 +257,12 @@
 			votesTotal.innerText = candidate.votes.length + ' votos ';
 			element.appendChild(votesTotal);
 
+			this.votes.candidates.push({
+				slug: candidate.slug,
+				votes: candidate.votes.length
+			});
+			this.votes.total += candidate.votes.length;
+
 			return element;
 
 		};
@@ -110,6 +272,9 @@
 			for (var candidate in this.match.candidates)
 				if (this.match.candidates.hasOwnProperty(candidate))
 					this.element.appendChild(this.buildCandidate(this.match.candidates[candidate]));
+
+			this.graph = new DuelGraph(this.votes);
+			this.element.appendChild(this.graph.element);
 
 			app.element.appendChild(this.element);
 
