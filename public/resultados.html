@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="roboto">
 <meta charset="UTF-8">
 <title>UFS - Resultados</title>
 <meta name="viewport"
@@ -15,6 +15,38 @@
 <script src="dist/js/html5shiv-printshiv.js"></script>
 <script src="dist/js/classList.min.js"></script>
 <![endif]-->
+
+<style>
+
+	.Debug {
+		-webkit-align-items: center;
+		align-items: center;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-justify-content: center;
+		justify-content: center;
+		height: 100vh;
+		width: 100%;
+		font-weight: 700;
+		text-transform: uppercase;
+		-webkit-transition: height .6s 1s ease-out, opacity .6s .8s ease-in-out;
+		-moz-transition: height .6s 1s ease-out, opacity .6s .8s ease-in-out;
+		-ms-transition: height .6s 1s ease-out, opacity .6s .8s ease-in-out;
+		-o-transition: height .6s 1s ease-out, opacity .6s .8s ease-in-out;
+		transition: height .6s 1s ease-out, opacity .6s .8s ease-in-out;
+		padding: 0 1em;
+	}
+
+	.Debug.is-okay {
+		font-size: 2.25em;
+		height: 0;
+		opacity: 0;
+	}
+
+</style>
 
 <style>
 
@@ -75,13 +107,20 @@
 	}
 
 	.DuelGraph-inner .Graph-candidate-label {
+		font-weight: 700;
 		line-height: 3em;
 		color: #fff;
 	}
 
 </style>
 
-<body>
+<body class="grey-100">
+
+<div id="debug" class="Debug">
+
+	<span id="debug-text" class="font-blue"></span>
+
+</div>
 
 <main id="app" class="ResultApp"></main>
 
@@ -295,7 +334,9 @@
 
 	// pega as referencias
 	var databaseRef = firebase.database().ref();
-	var votesRef = databaseRef;
+	var candidatesRef = databaseRef.child('candidates/');
+	var matchesRef = databaseRef.child('matches/');
+	var votesRef = databaseRef.child('votes/');
 
 	// variaveis globais de dados
 	var data = {
@@ -304,70 +345,145 @@
 		votes: false
 	};
 
-	// listener de value change do database
-	votesRef.on('value', function (snap) {
+	function debug(text, stateClass) {
 
-		// reseta o body sempre que atualizar o banco
-		app.element.innerHTML = '';
+		console.log('debug: ' +  text);
 
-		// converte objeto votes em array
-		data.votes = function () {
+		var debugElement = document.getElementById('debug');
+		var debugTextElement = document.getElementById('debug-text');
 
-			var votes = [];
+		debugTextElement.innerHTML = text + '</br>';
 
-			for (var i in snap.val().votes)
-				if (snap.val().votes.hasOwnProperty(i)) {
+		debugElement.className = 'Debug';
 
-					var vote = snap.val().votes[i];
-					vote.key = i;
+		if (stateClass)
+			debugElement.classList.add(stateClass);
 
-					votes.push(vote);
+	}
 
-				}
+	debug('iniciando');
 
-			return votes;
+	function getCandidates() {
 
-		}();
+		debug('baixando lista de candidatos');
 
-		// converte objeto matches em array
-		data.matches = function () {
+		candidatesRef.once('value', function (snap) {
 
-			var matches = [];
+			// converte objeto candidates em array
+			data.candidates = function () {
 
-			for (var i in snap.val().matches)
-				if (snap.val().matches.hasOwnProperty(i)) {
+				var candidates = [];
 
-					var match = snap.val().matches[i];
-					match.key = i;
+				for (var i in snap.val())
+					if (snap.val().hasOwnProperty(i)) {
 
-					matches.push(match);
+						var candidate = snap.val()[i];
+						candidate.key = i;
 
-				}
+						candidates.push(candidate);
 
-			return matches;
+					}
 
-		}();
+				return candidates;
 
-		// converte objeto matches em array
-		data.candidates = function () {
+			}();
 
-			var candidates = [];
+			console.log(data.candidates);
 
-			for (var i in snap.val().candidates)
-				if (snap.val().candidates.hasOwnProperty(i)) {
+			getMatches();
 
-					var candidate = snap.val().candidates[i];
-					candidate.key = i;
+		});
 
-					candidates.push(candidate);
+	}
 
-				}
+	function getMatches() {
 
-			return candidates;
+		debug('baixando lista de partidas');
 
-		}();
+		matchesRef.once('value', function (snap) {
 
-		// AGORA SIM!
+			// converte objeto matches em array
+			data.matches = function () {
+
+				var matches = [];
+
+				for (var i in snap.val())
+					if (snap.val().hasOwnProperty(i)) {
+
+						var match = snap.val()[i];
+						match.key = i;
+
+						matches.push(match);
+
+					}
+
+				return matches;
+
+			}();
+
+			console.log(data.candidates);
+
+			debug('iniciando download da lista de votos');
+
+			setTimeout(function () {
+
+				getVotes();
+
+			}, 2000);
+
+		});
+
+	}
+
+	function getVotes() {
+
+		debug('baixando lista de votos');
+
+		votesRef.on('value', function (snap) {
+
+			debug('carregando lista de votos');
+
+			/*
+			 * Esta é uma função especial, é clusterizada
+			 * ela divide o ENORME objeto de votos em um array
+			 * para poupar esforços do navegador, ela divide o array em partes de 500
+			 * e executa isso de tempos em tempos (500ms)
+			 * */
+			data.votes = function () {
+
+				var val = snap.val();
+
+				var votes = [];
+
+				var votesKeys = Object.keys(snap.val());
+				var votesKeysLength = votesKeys.length;
+
+				for (var i = votesKeysLength; i--;)
+					votes.push(val[votesKeys[i]]);
+
+				return votes;
+
+			}();
+
+			console.log(data.votes);
+
+			debug('votos carregados!');
+
+			setTimeout(function () {
+
+				start();
+
+			}, 1200);
+
+		});
+
+	}
+
+	/*
+	* AGORA SIM
+	* essa função inicia a analise de dados
+	* */
+	function start(){
 
 		// pega informações de candidate
 		function getCandidate(candidateKey) {
@@ -416,7 +532,12 @@
 
 		}
 
-	});
+		debug('Prontinho! :)', 'is-okay');
+
+	}
+
+	// INIT FUNCTION
+	getCandidates();
 
 </script>
 

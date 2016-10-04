@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="">
+<meta charset="UTF-8">
+<title>UFS - Combate Sertanejo</title>
+<meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+<link rel="icon" type="image/png" href="dist/img/launcher-icon-2x.png" />
+<meta name="mobile-web-app-capable" content="yes">
+<script>
+	(function(d) {
+		var config = {
+					kitId: 'wbk2jny',
+					scriptTimeout: 3000,
+					async: true
+				},
+				h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	})(document);
+</script>
+<link rel="manifest" href="/public/manifest.json">
+<script src="dist/js/villa.min.js"></script>
+<link rel="stylesheet" href="dist/css/villa.min.css"/>
+<link rel="stylesheet" href="dist/css/ufs-app.css"/>
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
+<link rel="stylesheet" type="text/css" href="dist/css/villa-cross.min.css"/>
+<script src="dist/js/html5shiv.js"></script>
+<script src="dist/js/html5shiv-pshiv.js"></script>
+<script src="dist/js/classList.min.js"></script>
+<![endif]-->
+
+<body>
+
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-80491344-1', 'auto');
+	ga('send', 'pageview');
+
+</script>
+
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+
+<script>
+
+	// Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyAPBMowmgiW0V1H3FDlJ6GBLQHDq7RX3kg",
+		authDomain: "ufs-app.firebaseapp.com",
+		databaseURL: "https://ufs-app.firebaseio.com",
+		storageBucket: "ufs-app.appspot.com"
+	};
+
+	firebase.initializeApp(config);
+
+</script>
+
+<script>
+
+	var databaseRef = firebase.database().ref();
+	var candidatesRef = databaseRef.child('candidates/');
+	var matchesRef = databaseRef.child('matches/');
+	var votesRef = databaseRef.child('votes/');
+
+	// variaveis globais de dados
+	var data = {
+		candidates: false,
+		matches: false,
+		votes: false
+	};
+
+	function p(text) {
+
+		document.documentElement.innerHTML += text + '</br>';
+
+	}
+
+	p('iniciando');
+
+	function getCandidates() {
+
+		p('baixando lista de candidatos');
+
+		candidatesRef.once('value', function (snap) {
+
+			// converte objeto candidates em array
+			data.candidates = function () {
+
+				var candidates = [];
+
+				for (var i in snap.val())
+					if (snap.val().hasOwnProperty(i)) {
+
+						var candidate = snap.val()[i];
+						candidate.key = i;
+
+						candidates.push(candidate);
+
+					}
+
+				return candidates;
+
+			}();
+
+			console.log(data.candidates);
+
+			getMatches();
+
+		});
+
+	}
+
+	function getMatches() {
+
+		p('baixando lista de partidas');
+
+		matchesRef.once('value', function (snap) {
+
+			// converte objeto matches em array
+			data.matches = function () {
+
+				var matches = [];
+
+				for (var i in snap.val())
+					if (snap.val().hasOwnProperty(i)) {
+
+						var match = snap.val()[i];
+						match.key = i;
+
+						matches.push(match);
+
+					}
+
+				return matches;
+
+			}();
+
+			console.log(data.matches);
+
+			p('iniciando download da lista de votos');
+
+			setTimeout(function () {
+
+				getVotes();
+
+			}, 2000);
+
+		});
+
+	}
+
+	function getVotes() {
+
+		p('baixando lista de votos');
+
+		votesRef.on('value', function (snap) {
+
+			p('carregando lista de votos');
+
+			/*
+			* Esta é uma função especial, é clusterizada
+			* ela divide o ENORME objeto de votos em um array
+			* para poupar esforços do navegador, ela divide o array em partes de 500
+			* e executa isso de tempos em tempos (500ms)
+			* */
+			data.votes = function () {
+
+				var val = snap.val();
+
+				var votes = [];
+
+				var votesKeys = Object.keys(snap.val());
+				var votesKeysLength = votesKeys.length;
+
+				for (var i = votesKeysLength; i--;)
+					votes.push(val[votesKeys[i]]);
+
+				return votes;
+
+			}();
+
+			p('pronto!');
+
+
+		});
+
+	}
+
+	getVotes();
+
+</script>
+
+</body>
+
+</html>
