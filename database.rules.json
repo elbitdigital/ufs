@@ -19,7 +19,7 @@
     },
     "votes": {
       "$vote": {
-        ".write": "root.child('allowed').child(newData.child('hash').val()).exists()"
+        ".write": true
       }
     }
   }
